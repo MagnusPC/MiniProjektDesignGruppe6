@@ -85,7 +85,7 @@ condition</panel_attributes>
       <x>650</x>
       <y>470</y>
       <w>110</w>
-      <h>130</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes>Person
 --
@@ -94,7 +94,7 @@ address
 postalCode
 city
 phone
-memberId</panel_attributes>
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
