@@ -5,7 +5,7 @@ public class LoanCtrl {
     private PersonCtrl personCtrl;
     private LpCtrl lpCtrl;
     private Loan loan;
-    
+    private Person person;
     public LoanCtrl() {
         personCtrl = personCtrl;
         lpCtrl = lpCtrl;
