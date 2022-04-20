@@ -31,7 +31,7 @@ public class LoanContainer
      * @return    the sum of x and y
      */
     public boolean addLoan(Loan loan){
-        loans.add(loan);
+        return loans.add(loan);
     }
     
     public static LoanContainer getInstance(){
