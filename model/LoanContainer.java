@@ -12,7 +12,7 @@ public class LoanContainer
 {
     // instance variables - replace the example below with your own
     private Loan loan;
-    private LoanContainer instance;
+    private static LoanContainer instance;
     private ArrayList<Loan> loans;
     
     /**
@@ -30,9 +30,17 @@ public class LoanContainer
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public boolean addLoan(Loan loan){
+        loans.add(loan);
     }
+    
+    public static LoanContainer getInstance(){
+        if (instance == null){
+            instance = new LoanContainer();
+        }
+        return instance;
+    }
+
+
+
 }
