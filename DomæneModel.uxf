@@ -74,7 +74,6 @@ m2=0..*
     <panel_attributes>Copy
 --
 serialNumber
-purchaseDate
 purchasePrice
 condition</panel_attributes>
     <additional_attributes/>
