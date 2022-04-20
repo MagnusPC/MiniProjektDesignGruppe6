@@ -27,10 +27,6 @@ public class PersonContainer
         if (instance == null){
             instance = new PersonContainer();
         }
-        return instance;    
-    }
-    
-    public ArrayList getPersons(){
-        return persons;
+        return instance; 
     }
 }
