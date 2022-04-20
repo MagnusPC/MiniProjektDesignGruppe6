@@ -2,7 +2,7 @@ package tui;
 import java.util.Scanner;
 import controller.*;
 import model.Person;
-import model.Lp;
+import model.LP;
 
 
 /**
@@ -15,7 +15,7 @@ public class LoanMenu {
     // instance variables
     private LoanCtrl loanCtrl;
     private PersonCtrl personCtrl;
-    private LpCtrl lpCtrl;
+    private LPCtrl lpCtrl;
 
     /**
      * Constructor for objects of class LoanMenu
@@ -24,7 +24,7 @@ public class LoanMenu {
         // initialise instance variables
         loanCtrl = new LoanCtrl();
         personCtrl = new PersonCtrl();
-        lpCtrl = new LpCtrl();
+        lpCtrl = new LPCtrl();
     }
 
     public void start() {
@@ -83,7 +83,7 @@ public class LoanMenu {
     
     private void createLoan(){
         Person person = loanCtrl.findPersonByPhone(inputPerson());
-        Lp lp = loanCtrl.findLpByBarcode(inputLp());
+        LP lp = loanCtrl.findLpByBarcode(inputLp());
         loanCtrl.createLoan(person, lp);
     }
 }
