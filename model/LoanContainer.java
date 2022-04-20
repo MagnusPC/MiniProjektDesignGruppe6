@@ -8,8 +8,7 @@ import java.util.ArrayList;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class LoanContainer
-{
+public class LoanContainer{
     // instance variables - replace the example below with your own
     private static LoanContainer instance;
     private ArrayList<Loan> loans;
@@ -17,7 +16,7 @@ public class LoanContainer
     /**
      * Constructor for objects of class LoanContainer
      */
-    public LoanContainer()
+    private LoanContainer()
     {
         // initialise instance variables
         loans = new ArrayList<>();

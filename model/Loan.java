@@ -17,7 +17,7 @@ public class Loan
     /**
      * Constructor for objects of class Loan
      */
-    public Loan()
+    public Loan(Person person, Lp lp)
     {
         // initialise instance variables
         person = null;
