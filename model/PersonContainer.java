@@ -1,4 +1,5 @@
 package model;
+import java.util.ArrayList;
 
 
 /**
@@ -7,20 +8,22 @@ package model;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class PersonContainer
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
+public class PersonContainer {
+    private ArrayList<Person> persons;
+    private static PersonContainer instance;
+    
     /**
      * Constructor for objects of class PersonContainer
      */
-    public PersonContainer()
-    {
-        // initialise instance variables
-        x = 0;
+    private PersonContainer() {
+        persons = new ArrayList<>();
     }
-
     
+    public static PersonContainer getInstance() {
+        if (instance == null) {
+            instance = new PersonContainer();
+        }
+        return instance;
+    }
     
 }
