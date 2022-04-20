@@ -11,7 +11,6 @@ import java.util.ArrayList;
 public class LoanContainer
 {
     // instance variables - replace the example below with your own
-    private Loan loan;
     private static LoanContainer instance;
     private ArrayList<Loan> loans;
     
@@ -24,12 +23,7 @@ public class LoanContainer
         loans = new ArrayList<>();
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
+
     public boolean addLoan(Loan loan){
         return loans.add(loan);
     }
