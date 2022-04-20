@@ -3,7 +3,7 @@ import model.*;
 
 public class LoanCtrl {
     private PersonCtrl personCtrl;
-    private LpCtrl lpCtrl;
+    private LPCtrl lpCtrl;
     private LoanContainer loanContainer;
     
     /**
@@ -11,7 +11,7 @@ public class LoanCtrl {
      */
     public LoanCtrl() {
         personCtrl = new PersonCtrl();
-        lpCtrl = new LpCtrl();
+        lpCtrl = new LPCtrl();
         loanContainer = LoanContainer.getInstance();
     }
     
@@ -19,11 +19,11 @@ public class LoanCtrl {
         return personCtrl.findPersonByPhone(phone);
     }
     
-    public Lp findLpByBarcode(int barcode){
+    public LP findLpByBarcode(int barcode){
         return lpCtrl.findLpByBarcode(barcode);
     }
     
-    public void createLoan(Person person, Lp lp){
+    public void createLoan(Person person, LP lp){
         Loan loan = new Loan(person, lp);
         loanContainer.addLoan(loan);
     }

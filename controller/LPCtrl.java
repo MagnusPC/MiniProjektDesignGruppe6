@@ -1,6 +1,6 @@
 package controller;
-import model.LpContainer;
-import model.Lp;
+import model.LPContainer;
+import model.LP;
 
 
 /**
@@ -9,18 +9,18 @@ import model.Lp;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class LpCtrl
+public class LPCtrl
 {
     // instance variables - replace the example below with your own
-    private LpContainer lpContainer;
+    private LPContainer lpContainer;
     
     /**
      * Constructor for objects of class PersonCtrl
      */
-    public LpCtrl()
+    public LPCtrl()
     {
         // initialise instance variables
-        lpContainer = LpContainer.getInstance(); 
+        lpContainer = LPContainer.getInstance(); 
     }
 
     /**
@@ -29,7 +29,7 @@ public class LpCtrl
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public Lp findLpByBarcode(int barcode){
+    public LP findLpByBarcode(int barcode){
         return lpContainer.findLpByBarcode(barcode);
     }
 }

@@ -7,7 +7,7 @@ package model;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Lp
+public class LP
 {
     // instance variables - replace the example below with your own
     private int barcode;
@@ -15,7 +15,7 @@ public class Lp
     /**
      * Constructor for objects of class Lp
      */
-    public Lp()
+    public LP()
     {
         // initialise instance variables
         barcode = 001;

@@ -12,12 +12,12 @@ public class Loan
 {
     // instance variables - replace the example below with your own
     private Person person;
-    private Lp lp;
+    private LP lp;
 
     /**
      * Constructor for objects of class Loan
      */
-    public Loan(Person person, Lp lp)
+    public Loan(Person person, LP lp)
     {
         // initialise instance variables
         person = null;
@@ -31,7 +31,7 @@ public class Loan
         this.person = person;
     }
     
-    public void setLp(Lp lp){
+    public void setLp(LP lp){
         this.lp = lp;
     }
 }

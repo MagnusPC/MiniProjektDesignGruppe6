@@ -8,34 +8,34 @@ import java.util.ArrayList;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class LpContainer
+public class LPContainer
 {
     // instance variables - replace the example below with your own
-    private static LpContainer instance;
-    private ArrayList<Lp> lps;
+    private static LPContainer instance;
+    private ArrayList<LP> lps;
 
     /**
      * Constructor for objects of class LpContainer
      */
-    private LpContainer()
+    private LPContainer()
     {
         // initialise instance variables
         lps = new ArrayList<>();
     }
 
-    public static LpContainer getInstance(){
+    public static LPContainer getInstance(){
         if(instance == null){
-            instance = new LpContainer();
+            instance = new LPContainer();
         }
         return instance;
     }
     
-    public Lp findLpByBarcode(int barcode){
+    public LP findLpByBarcode(int barcode){
         boolean found = false;
-        Lp lp = null;
+        LP lp = null;
         int index = 0;
         while(index < lps.size() && !found){
-            Lp element = lps.get(index);
+            LP element = lps.get(index);
             if(element.getBarcode() == barcode){
                 found = true;
                 lp = element;
