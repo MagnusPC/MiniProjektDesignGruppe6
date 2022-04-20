@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>10</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>860</x>
-      <y>470</y>
-      <w>110</w>
-      <h>100</h>
+      <x>208</x>
+      <y>304</y>
+      <w>88</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Loan
 --
@@ -21,10 +21,10 @@ state
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1100</x>
-      <y>270</y>
-      <w>110</w>
-      <h>100</h>
+      <x>400</x>
+      <y>144</y>
+      <w>88</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>LP
 --
@@ -38,10 +38,10 @@ publicationDate
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>960</x>
-      <y>490</y>
-      <w>160</w>
-      <h>50</h>
+      <x>288</x>
+      <y>320</y>
+      <w>128</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..*
@@ -52,10 +52,10 @@ contains &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>750</x>
-      <y>490</y>
-      <w>130</w>
-      <h>50</h>
+      <x>120</x>
+      <y>320</y>
+      <w>104</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
@@ -66,10 +66,10 @@ m2=0..*
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1100</x>
-      <y>470</y>
-      <w>110</w>
-      <h>100</h>
+      <x>400</x>
+      <y>304</y>
+      <w>88</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Copy
 --
@@ -82,10 +82,10 @@ condition</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>650</x>
-      <y>470</y>
-      <w>110</w>
-      <h>110</h>
+      <x>40</x>
+      <y>304</y>
+      <w>88</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>Person
 --
@@ -100,10 +100,10 @@ phone
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1140</x>
-      <y>360</y>
-      <w>50</w>
-      <h>130</h>
+      <x>432</x>
+      <y>216</y>
+      <w>40</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 1
