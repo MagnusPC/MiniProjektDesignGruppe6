@@ -11,7 +11,7 @@ import model.*;
 public class PersonCtrl
 {
     // instance variables - replace the example below with your own
-    private int x;
+    
     private PersonContainer personContainer;
     private ArrayList personList;
     /**
@@ -21,7 +21,7 @@ public class PersonCtrl
     {
         // initialise instance variables
         personContainer = new PersonContainer(); 
-        
+        personList = new ArrayList<>();
     }
 
     /**
@@ -32,7 +32,6 @@ public class PersonCtrl
      */
     public Person findPersonByPhone(String phone){
         boolean found = false;
-        personList = new ArrayList<>();
         personList = PersonContainer.getPersons(); 
         Person p = null;
         

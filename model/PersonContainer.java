@@ -29,4 +29,7 @@ public class PersonContainer
         }
         return instance; 
     }
+    public ArrayList getPersons(){
+        return persons;
+    }
 }
