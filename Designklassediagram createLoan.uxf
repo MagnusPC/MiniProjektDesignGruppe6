@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1190</x>
+      <y>80</y>
+      <w>240</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>LoanUI
+--
+-loanCtrl:LoanCtrl
+-employeeCtrl:EmployeeCtrl
+-loanerCtrl:LoanerCtrl
+-bookCtrl:BookCtrl
+--
++createLoan()
++addLoaner()
++addBook()
++endLoan()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1140</x>
+      <y>370</y>
+      <w>340</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>LoanCtrl
+--
+-employeeCtrl:EmployeeCtrl
+-loanerCtrl:LoanerCtrl
+-bookCtrl:BookCtrl
+-loan:Loan
+--
++&lt;&lt;create&gt;&gt;Loan(employeeID:String)
++loaner=addLoaner(loanerID:int):Loaner
++book=addBook(BookID:int):Book
++fl=finishLoan():Boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1750</x>
+      <y>370</y>
+      <w>420</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>EmployeeCtrl
+--
+-employeeContainer:EmployeeContainer
+--
++findEmployeeByID(employeeID:String):Employee</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1750</x>
+      <y>520</y>
+      <w>420</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>EmployeeContainer
+--
+-employee:Employee
+--
++findEmployeeByID(employeeID:String):Employee</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1750</x>
+      <y>670</y>
+      <w>420</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Employee
+--
+-employeeID:String 
+-name:String
+--
++getEmployeeByID()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>700</y>
+      <w>420</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Loan
+--
+
+--
++&lt;&lt;create&gt;&gt;Loan(employee:Employee):Loan
++addLoaner(loaner:Loaner)
++addBook(book:Book)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1240</x>
+      <y>860</y>
+      <w>260</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>                                             1
+_LoanContainer_
+--
+-loan:Loan
+-instance:loanContainer
+--
++addLoan(loan:Loan):Boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>370</y>
+      <w>420</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>LoanerCtrl
+--
+-loanerContainer:LoanerContainer
+--
++findLoanerByID(loanerID:int):Loaner</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>520</y>
+      <w>420</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>LoanerContainer
+--
+-loaner:Loaner
+--
++findLoanerByID(loanerID:int):Loaner</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>670</y>
+      <w>420</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Loaner
+--
+-loanerID:int
+-name:String
+--
++getLoanerByID()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>270</y>
+      <w>420</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>BookCtrl
+--
+-bookContainer:BookContainer
+--
++findBookByID(BookID:int):Book</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1300</x>
+      <y>270</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1160</x>
+      <y>560</y>
+      <w>120</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;140.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>850</x>
+      <y>390</y>
+      <w>310</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;290.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1470</x>
+      <y>390</y>
+      <w>300</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>280.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1150</x>
+      <y>820</y>
+      <w>110</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0;90.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>460</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>610</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1780</x>
+      <y>460</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1780</x>
+      <y>610</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>290</y>
+      <w>750</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;630.0;10.0;630.0;100.0;730.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1360</x>
+      <y>560</y>
+      <w>40</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>20.0;300.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>420</y>
+      <w>420</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>BookContainer
+--
+-book:Book
+--
++findBookByID(bookID:int):Book</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>360</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>510</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>570</y>
+      <w>420</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Loaner
+--
+-bookID:int
+-title:String
+-author:String
+--
++getBookByID()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1230</x>
+      <y>850</y>
+      <w>460</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+                                                        Noget med instance
+                                                        som jeg ikke forstår 
+                                                        :)</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
