@@ -1,4 +1,5 @@
 package model;
+import java.util.ArrayList;
 
 
 /**
@@ -10,15 +11,17 @@ package model;
 public class LoanContainer
 {
     // instance variables - replace the example below with your own
-    private int x;
-
+    private Loan loan;
+    private LoanContainer instance;
+    private ArrayList<Loan> loans;
+    
     /**
      * Constructor for objects of class LoanContainer
      */
     public LoanContainer()
     {
         // initialise instance variables
-        x = 0;
+        loans = new ArrayList<>();
     }
 
     /**
