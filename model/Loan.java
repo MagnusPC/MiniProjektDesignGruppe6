@@ -10,7 +10,7 @@ package model;
 public class Loan
 {
     // instance variables - replace the example below with your own
-    private int x;
+    
 
     /**
      * Constructor for objects of class Loan
@@ -18,8 +18,10 @@ public class Loan
     public Loan()
     {
         // initialise instance variables
-        x = 0;
+        
     }
-
+    //public Boolean addPerson(){
+        
+    //}
     
 }
