@@ -1,6 +1,7 @@
 package controller;
 import java.util.ArrayList;
-import model.*;
+import model.PersonContainer;
+import model.Person;
 
 /**
  * Write a description of class PersonCtrl here.
