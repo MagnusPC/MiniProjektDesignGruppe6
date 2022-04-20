@@ -11,7 +11,7 @@ public class PersonCtrl
 {
     // instance variables - replace the example below with your own
     private int x;
-
+    private PersonController personController;
     /**
      * Constructor for objects of class PersonCtrl
      */
@@ -27,9 +27,16 @@ public class PersonCtrl
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public Person findPersonByName(String phone){
+        boolean found = false;
+        
+        Items id = null;
+        for(int i = 0 ; i < items.size() && !found ; i++){
+            if(items.get(i).getName().equals(name)){
+                id = items.get(i);
+            }
+            }
+            return id;
+        }
     }
-}
+    
