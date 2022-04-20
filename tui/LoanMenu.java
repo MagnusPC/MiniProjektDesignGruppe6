@@ -1,6 +1,6 @@
 package tui;
 import java.util.Scanner;
-
+import controller.*;
 
 
 /**
@@ -11,14 +11,15 @@ import java.util.Scanner;
  */
 public class LoanMenu {
     // instance variables
-    
+    private LoanCtrl loanCtrl;
+    private PersonCtrl personCtrl;
+    private LpCtrl lpCtrl;
 
     /**
      * Constructor for objects of class LoanMenu
      */
     public LoanMenu() {
         // initialise instance variables
-        
        
     }
 
