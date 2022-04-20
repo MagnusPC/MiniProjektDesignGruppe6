@@ -17,6 +17,14 @@ public class LoanCtrl {
         loanContainer = LoanContainer.getInstance();
     }
     
+    public Person findPersonByPhone(String phone){
+        return personCtrl.findPersonByPhone(phone);
+    }
+    
+    public Lp findLpByBarcode(int barcode){
+        return lpCtrl.findLpByBarcode(barcode);
+    }
+    
     public void createLoan(Person person, Lp lp){
         Loan loan = new Loan(person, lp);
         loanContainer.addLoan(loan);
