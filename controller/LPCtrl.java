@@ -2,20 +2,20 @@ package controller;
 
 
 /**
- * Write a description of class LPCtrl here.
+ * Write a description of class LpCtrl here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class LPCtrl
+public class LpCtrl
 {
     // instance variables - replace the example below with your own
     private int x;
 
     /**
-     * Constructor for objects of class LPCtrl
+     * Constructor for objects of class LpCtrl
      */
-    public LPCtrl()
+    public LpCtrl()
     {
         // initialise instance variables
         x = 0;

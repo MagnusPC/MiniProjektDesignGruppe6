@@ -2,20 +2,20 @@ package model;
 
 
 /**
- * Write a description of class LPContainer here.
+ * Write a description of class LpContainer here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class LPContainer
+public class LpContainer
 {
     // instance variables - replace the example below with your own
     private int x;
 
     /**
-     * Constructor for objects of class LPContainer
+     * Constructor for objects of class LpContainer
      */
-    public LPContainer()
+    public LpContainer()
     {
         // initialise instance variables
         x = 0;
