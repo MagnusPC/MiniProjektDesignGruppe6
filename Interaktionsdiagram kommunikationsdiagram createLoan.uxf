@@ -4,8 +4,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>810</x>
-      <y>234</y>
+      <x>792</x>
+      <y>360</y>
       <w>90</w>
       <h>27</h>
     </coordinates>
@@ -15,38 +15,38 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>846</x>
-      <y>252</y>
-      <w>306</w>
+      <x>828</x>
+      <y>378</y>
+      <w>351</w>
       <h>126</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 1.1 createLoan()
-2.1 p=addPerson(phone:String):Person
-3.1 lp=addLp(barcode:int):Barcode
+2.1 person=addPerson(phone:String):Person
+3.1 lp=addLp(barcode:int):Lp
 4.1 fl=finishLoan():Boolean</panel_attributes>
     <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>846</x>
-      <y>126</y>
-      <w>135</w>
-      <h>126</h>
+      <x>639</x>
+      <y>342</y>
+      <w>171</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 1 createLoan()
 2 addPerson()
 3 addLp()
 4 finishLoan()</panel_attributes>
-    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+    <additional_attributes>170.0;30.0;10.0;30.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>810</x>
-      <y>360</y>
+      <x>792</x>
+      <y>486</y>
       <w>90</w>
       <h>27</h>
     </coordinates>
@@ -56,22 +56,22 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>765</x>
-      <y>378</y>
+      <x>747</x>
+      <y>504</y>
       <w>297</w>
       <h>243</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 1.1.1 loan=&lt;&lt;create&gt;&gt;Loan():Loan
-2.1.2 addPerson(p:Person)
-3.1.2 addLp(lp:LP)</panel_attributes>
+2.1.2 addPerson(person:Person)
+3.1.2 addLp(lp:Lp)</panel_attributes>
     <additional_attributes>10.0;250.0;100.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>846</x>
-      <y>378</y>
+      <x>828</x>
+      <y>504</y>
       <w>315</w>
       <h>333</h>
     </coordinates>
@@ -83,8 +83,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>729</x>
-      <y>603</y>
+      <x>711</x>
+      <y>729</y>
       <w>90</w>
       <h>27</h>
     </coordinates>
@@ -94,161 +94,150 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>891</x>
-      <y>351</y>
+      <x>873</x>
+      <y>477</y>
       <w>342</w>
       <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-3.1.1 book=findBookByID(bookID:int):Book</panel_attributes>
+3.1.1 lp=findLpByBarcode(barcode:int):Lp</panel_attributes>
     <additional_attributes>360.0;30.0;10.0;30.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>441</x>
-      <y>351</y>
-      <w>387</w>
+      <x>378</x>
+      <y>477</y>
+      <w>432</w>
       <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-2.1.1 loaner=findLoanerByID(loanerID:int):Loaner</panel_attributes>
-    <additional_attributes>10.0;30.0;410.0;30.0</additional_attributes>
+2.1.1 person=findPersonByPhone(phone:String):Person</panel_attributes>
+    <additional_attributes>10.0;30.0;460.0;30.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>333</x>
-      <y>360</y>
+      <x>270</x>
+      <y>486</y>
       <w>117</w>
       <h>27</h>
     </coordinates>
-    <panel_attributes>_:LoanerCtrl_</panel_attributes>
+    <panel_attributes>_:PersonCtrl_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>351</x>
-      <y>378</y>
-      <w>396</w>
+      <x>288</x>
+      <y>504</y>
+      <w>441</w>
       <h>108</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-2.1.1.1 loaner=findLoanerByID(loanerID:int):Loaner</panel_attributes>
+2.1.1.1 person=findPersonByPhone(phone:String):Person</panel_attributes>
     <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>333</x>
-      <y>468</y>
+      <x>270</x>
+      <y>594</y>
       <w>144</w>
       <h>27</h>
     </coordinates>
-    <panel_attributes>_:LoanerContainer_</panel_attributes>
+    <panel_attributes>_:PersonContainer_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>351</x>
-      <y>486</y>
+      <x>288</x>
+      <y>612</y>
       <w>234</w>
       <h>117</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-2.1.1.1.1 *[i=1..n]getLoaner()</panel_attributes>
+2.1.1.1.1 *[i=1..n]getPerson()</panel_attributes>
     <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>333</x>
-      <y>585</y>
+      <x>270</x>
+      <y>711</y>
       <w>117</w>
       <h>27</h>
     </coordinates>
-    <panel_attributes>_:Loaner_</panel_attributes>
+    <panel_attributes>_:Person_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1215</x>
-      <y>360</y>
+      <x>1197</x>
+      <y>486</y>
       <w>90</w>
       <h>27</h>
     </coordinates>
-    <panel_attributes>_:BookCtrl_</panel_attributes>
+    <panel_attributes>_:LpCtrl_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1251</x>
-      <y>378</y>
-      <w>351</w>
+      <x>1233</x>
+      <y>504</y>
+      <w>342</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-3.1.1.1 book=findBookByID(bookID:int):Book</panel_attributes>
+3.1.1.1 lp=findLpByBarcode(barcode:int):Lp</panel_attributes>
     <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1215</x>
-      <y>432</y>
+      <x>1197</x>
+      <y>558</y>
       <w>126</w>
       <h>27</h>
     </coordinates>
-    <panel_attributes>_:BookContainer_</panel_attributes>
+    <panel_attributes>_:LpContainer_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1251</x>
-      <y>450</y>
-      <w>216</w>
+      <x>1233</x>
+      <y>576</y>
+      <w>198</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-3.1.1.1.1 *[i=1..n]getBook()</panel_attributes>
+3.1.1.1.1 *[i=1..n]getLp()</panel_attributes>
     <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1215</x>
-      <y>504</y>
+      <x>1197</x>
+      <y>630</y>
       <w>90</w>
       <h>27</h>
     </coordinates>
-    <panel_attributes>_:Book_</panel_attributes>
+    <panel_attributes>_:Lp_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>837</x>
-      <y>693</y>
+      <x>819</x>
+      <y>819</y>
       <w>135</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>_:LoanContainer_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>810</x>
-      <y>108</y>
-      <w>90</w>
-      <h>27</h>
-    </coordinates>
-    <panel_attributes>_:MainMenu_</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
