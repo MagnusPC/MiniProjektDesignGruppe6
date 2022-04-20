@@ -1,6 +1,6 @@
- 
+package tui;
 import java.util.Scanner;
-
+import controller.*;
 
 
 /**
@@ -11,15 +11,18 @@ import java.util.Scanner;
  */
 public class LoanMenu {
     // instance variables
-    
+    private LoanCtrl loanCtrl;
+    private PersonCtrl personCtrl;
+    private LpCtrl lpCtrl;
 
     /**
      * Constructor for objects of class LoanMenu
      */
     public LoanMenu() {
         // initialise instance variables
-        
-       
+        loanCtrl = new LoanCtrl();
+        personCtrl = new PersonCtrl();
+        lpCtrl = new LpCtrl();
     }
 
     public void start() {
@@ -32,7 +35,7 @@ public class LoanMenu {
             int choice = writeLoanMenu();
             switch (choice) {
                 case 1:
-                  System.out.println(" Denne er ikke implementeret endnu!");
+                  createLoan();
                   break;
                 case 0:
                   running = false;
@@ -60,6 +63,12 @@ public class LoanMenu {
             keyboard.nextLine();
         }
         return keyboard.nextInt();
+    }
+    
+    private void createLoan(){
+        Person person = findPersonByPhone();
+        Lp lp = findLpByBarcode();
+        loanCtrl.createLoan(person, lp);
     }
 }
 
