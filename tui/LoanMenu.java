@@ -81,14 +81,9 @@ public class LoanMenu {
         return barcode;
     }
     
-    /*private Person findPersonByPhone(){
-        String name = inputPerson();
-        Person p = loanCtrl.findPersonByPhone(name);
-    }*/
-    
     private void createLoan(){
-        loanCtrl.findPersonByPhone(inputPerson());
-        loanCtrl.findLpByBarcode(inputLp());
+        Person person = loanCtrl.findPersonByPhone(inputPerson());
+        Lp lp = loanCtrl.findLpByBarcode(inputLp());
         loanCtrl.createLoan(person, lp);
     }
 }

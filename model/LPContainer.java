@@ -29,4 +29,18 @@ public class LpContainer
         }
         return instance;
     }
+    
+    public Lp findLpByBarcode(int barcode){
+        boolean found = false;
+        Lp lp = null;
+        int index = 0;
+        while(index < lps.size() && !found){
+            Lp element = lps.get(index);
+            if(element.getBarcode() == barcode){
+                found = true;
+                lp = element;
+            }
+        }
+        return lp;
+    }
 }

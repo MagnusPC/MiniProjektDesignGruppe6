@@ -1,5 +1,6 @@
 package controller;
-
+import model.Lp;
+import model.LpContainer;
 
 /**
  * Write a description of class LpCtrl here.
@@ -10,7 +11,7 @@ package controller;
 public class LpCtrl
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private LpContainer lpContainer;
 
     /**
      * Constructor for objects of class LpCtrl
@@ -18,18 +19,10 @@ public class LpCtrl
     public LpCtrl()
     {
         // initialise instance variables
-        x = 0;
+        lpContainer = LpContainer.getInstance();
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public Lp findLpByBarcode(int barcode){
+        return lpContainer.findLpByBarcode(barcode);
     }
 }

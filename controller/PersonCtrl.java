@@ -31,10 +31,7 @@ public class PersonCtrl
      * @return    the sum of x and y
      */
     public Person findPersonByPhone(String phone){
-        boolean found = false;
-        personList = PersonContainer.getPersons(); 
-        Person p = null;
-        
-        }
+        return personContainer.findPersonByPhone(phone);
+    }
     }
     

@@ -29,6 +29,21 @@ public class PersonContainer
         }
         return instance; 
     }
+    
+    public Person findPersonByPhone(String phone){
+        boolean found = false;
+        Person person = null;
+        int index = 0;
+        while(index < persons.size() && !found){
+            Person element = persons.get(index);
+            if(element.getPhone().equals(phone)){
+                found = true;
+                person = element;
+            }
+        }
+        return person;
+    }
+    
     public ArrayList getPersons(){
         return persons;
     }
