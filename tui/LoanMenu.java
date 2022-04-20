@@ -1,6 +1,8 @@
 package tui;
 import java.util.Scanner;
 import controller.*;
+import model.Person;
+import model.Lp;
 
 
 /**
@@ -65,9 +67,28 @@ public class LoanMenu {
         return keyboard.nextInt();
     }
     
+    private String inputPerson(){
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Indtast personens telefonnummer: ");
+        String phone = keyboard.nextLine();
+        return phone;
+    }
+    
+    private int inputLp(){
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Indtast pladens stregkode: ");
+        int barcode = keyboard.nextInt();
+        return barcode;
+    }
+    
+    /*private Person findPersonByPhone(){
+        String name = inputPerson();
+        Person p = loanCtrl.findPersonByPhone(name);
+    }*/
+    
     private void createLoan(){
-        Person person = findPersonByPhone();
-        Lp lp = findLpByBarcode();
+        loanCtrl.findPersonByPhone(inputPerson());
+        loanCtrl.findLpByBarcode(inputLp());
         loanCtrl.createLoan(person, lp);
     }
 }
