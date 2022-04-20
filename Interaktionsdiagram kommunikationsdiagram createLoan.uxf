@@ -4,49 +4,49 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>846</x>
-      <y>207</y>
+      <x>810</x>
+      <y>234</y>
       <w>90</w>
       <h>27</h>
     </coordinates>
-    <panel_attributes>_:LoanUI_</panel_attributes>
+    <panel_attributes>_:LoanMenu_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>882</x>
-      <y>225</y>
-      <w>333</w>
+      <x>846</x>
+      <y>252</y>
+      <w>306</w>
       <h>126</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-1.1 createLoan(employeeID:String)
-2.1 loaner=addLoaner(loanerID:int):Loaner
-3.1 book=addBook(bookID:int):Book
+1.1 createLoan()
+2.1 p=addPerson(phone:String):Person
+3.1 lp=addLp(barcode:int):Barcode
 4.1 fl=finishLoan():Boolean</panel_attributes>
     <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>576</x>
-      <y>189</y>
-      <w>288</w>
-      <h>90</h>
+      <x>846</x>
+      <y>126</y>
+      <w>135</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 1 createLoan()
-2 addLoaner()
-3 addBook()
+2 addPerson()
+3 addLp()
 4 finishLoan()</panel_attributes>
-    <additional_attributes>300.0;30.0;10.0;30.0</additional_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>846</x>
-      <y>333</y>
+      <x>810</x>
+      <y>360</y>
       <w>90</w>
       <h>27</h>
     </coordinates>
@@ -56,22 +56,22 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
-      <y>351</y>
-      <w>405</w>
+      <x>765</x>
+      <y>378</y>
+      <w>297</w>
       <h>243</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-1.1.2 loan=&lt;&lt;create&gt;&gt;Loan(emp:Employee):Loan
-2.1.2 addLoaner(loaner:Loaner)
-3.1.2 addBook(book:Book)</panel_attributes>
+1.1.1 loan=&lt;&lt;create&gt;&gt;Loan():Loan
+2.1.2 addPerson(p:Person)
+3.1.2 addLp(lp:LP)</panel_attributes>
     <additional_attributes>10.0;250.0;100.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>882</x>
-      <y>351</y>
+      <x>846</x>
+      <y>378</y>
       <w>315</w>
       <h>333</h>
     </coordinates>
@@ -83,8 +83,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>765</x>
-      <y>576</y>
+      <x>729</x>
+      <y>603</y>
       <w>90</w>
       <h>27</h>
     </coordinates>
@@ -94,8 +94,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>927</x>
-      <y>324</y>
+      <x>891</x>
+      <y>351</y>
       <w>342</w>
       <h>45</h>
     </coordinates>
@@ -104,91 +104,22 @@
     <additional_attributes>360.0;30.0;10.0;30.0</additional_attributes>
   </element>
   <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>81</x>
-      <y>306</y>
-      <w>117</w>
-      <h>27</h>
-    </coordinates>
-    <panel_attributes>_:EmployeeCtrl_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>63</x>
-      <y>378</y>
-      <w>180</w>
-      <h>27</h>
-    </coordinates>
-    <panel_attributes>_:EmployeeContainer_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>135</x>
-      <y>324</y>
-      <w>477</w>
-      <h>72</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-1.1.1.1 emp=findEmployeeByID(employeeID:String):Employee</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>90</x>
-      <y>450</y>
-      <w>117</w>
-      <h>27</h>
-    </coordinates>
-    <panel_attributes>_:Employee_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>135</x>
-      <y>396</y>
-      <w>252</w>
-      <h>72</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-1.1.1.1.1 *[i=1..n]getEmployee()</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>414</x>
-      <y>342</y>
-      <w>450</w>
-      <h>144</h>
+      <x>441</x>
+      <y>351</y>
+      <w>387</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 2.1.1 loaner=findLoanerByID(loanerID:int):Loaner</panel_attributes>
-    <additional_attributes>10.0;140.0;480.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>189</x>
-      <y>306</y>
-      <w>675</w>
-      <h>54</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-1.1.1 emp=findEmployeeByID(employeeID:String):Employee</panel_attributes>
-    <additional_attributes>10.0;10.0;730.0;40.0</additional_attributes>
+    <additional_attributes>10.0;30.0;410.0;30.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>369</x>
-      <y>468</y>
+      <x>333</x>
+      <y>360</y>
       <w>117</w>
       <h>27</h>
     </coordinates>
@@ -198,20 +129,20 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>387</x>
-      <y>486</y>
+      <x>351</x>
+      <y>378</y>
       <w>396</w>
-      <h>72</h>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 2.1.1.1 loaner=findLoanerByID(loanerID:int):Loaner</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>369</x>
-      <y>540</y>
+      <x>333</x>
+      <y>468</y>
       <w>144</w>
       <h>27</h>
     </coordinates>
@@ -221,20 +152,20 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>387</x>
-      <y>558</y>
+      <x>351</x>
+      <y>486</y>
       <w>234</w>
-      <h>72</h>
+      <h>117</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 2.1.1.1.1 *[i=1..n]getLoaner()</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>369</x>
-      <y>612</y>
+      <x>333</x>
+      <y>585</y>
       <w>117</w>
       <h>27</h>
     </coordinates>
@@ -244,8 +175,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1251</x>
-      <y>333</y>
+      <x>1215</x>
+      <y>360</y>
       <w>90</w>
       <h>27</h>
     </coordinates>
@@ -255,8 +186,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1287</x>
-      <y>351</y>
+      <x>1251</x>
+      <y>378</y>
       <w>351</w>
       <h>72</h>
     </coordinates>
@@ -267,8 +198,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1251</x>
-      <y>405</y>
+      <x>1215</x>
+      <y>432</y>
       <w>126</w>
       <h>27</h>
     </coordinates>
@@ -278,8 +209,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1287</x>
-      <y>423</y>
+      <x>1251</x>
+      <y>450</y>
       <w>216</w>
       <h>72</h>
     </coordinates>
@@ -290,8 +221,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1251</x>
-      <y>477</y>
+      <x>1215</x>
+      <y>504</y>
       <w>90</w>
       <h>27</h>
     </coordinates>
@@ -301,12 +232,23 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>873</x>
-      <y>666</y>
+      <x>837</x>
+      <y>693</y>
       <w>135</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>_:LoanContainer_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>810</x>
+      <y>108</y>
+      <w>90</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>_:MainMenu_</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
