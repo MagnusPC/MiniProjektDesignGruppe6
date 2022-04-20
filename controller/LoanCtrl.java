@@ -4,8 +4,6 @@ import model.*;
 public class LoanCtrl {
     private PersonCtrl personCtrl;
     private LpCtrl lpCtrl;
-    //private Loan loan;
-    //private Person person;
     private LoanContainer loanContainer;
     
     /**
