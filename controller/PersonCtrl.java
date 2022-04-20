@@ -1,5 +1,6 @@
 package controller;
-
+import java.util.ArrayList;
+import model.*;
 
 /**
  * Write a description of class PersonCtrl here.
@@ -11,14 +12,16 @@ public class PersonCtrl
 {
     // instance variables - replace the example below with your own
     private int x;
-    private PersonController personController;
+    private PersonContainer personContainer;
+    private ArrayList personList;
     /**
      * Constructor for objects of class PersonCtrl
      */
     public PersonCtrl()
     {
         // initialise instance variables
-        x = 0;
+        personContainer = new PersonContainer(); 
+        
     }
 
     /**
@@ -27,16 +30,12 @@ public class PersonCtrl
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public Person findPersonByName(String phone){
+    public Person findPersonByPhone(String phone){
         boolean found = false;
+        personList = new ArrayList<>();
+        personList = PersonContainer.getPersons(); 
+        Person p = null;
         
-        Items id = null;
-        for(int i = 0 ; i < items.size() && !found ; i++){
-            if(items.get(i).getName().equals(name)){
-                id = items.get(i);
-            }
-            }
-            return id;
         }
     }
     
