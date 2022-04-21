@@ -15,6 +15,7 @@ public class LP
     private String title;
     private String artist;
     private int publicationYear;
+    //TODO: Condition, check i loops.
     private ArrayList<Copy> copies;
 
     /**
