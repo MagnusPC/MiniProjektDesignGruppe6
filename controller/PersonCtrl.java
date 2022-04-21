@@ -29,7 +29,7 @@ public class PersonCtrl
         addPerson(person);
     }
 
-    public void addPerson(Person person){
+    private void addPerson(Person person){
         personContainer.addPerson(person);
     }
     

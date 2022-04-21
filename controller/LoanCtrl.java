@@ -32,8 +32,13 @@ public class LoanCtrl {
         return lpCtrl.findLpByBarcode(barcode);
     }
     
-    public void createLoan(Person person, LP lp){
-        Loan loan = new Loan(person, lp);
+    // public void createLoan(Person person, LP lp){
+        // Loan loan = new Loan(person, lp);
+        // currentLoan = loan;
+    // }
+    
+    public void createLoan(String phone, int barcode){
+        Loan loan = new Loan(findPersonByPhone(phone), findLpByBarcode(serialNumber));
         currentLoan = loan;
     }
     

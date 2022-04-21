@@ -14,6 +14,7 @@ public class LPContainer
     private static LPContainer instance;
     private ArrayList<LP> lps;
 
+
     /**
      * Constructor for objects of class LpContainer
      */
@@ -34,12 +35,15 @@ public class LPContainer
         lps.add(lp);
     }
     
-    public LP findLpByBarcode(int barcode){
+    public LP findLpBySerialNumber(int serialNumber){
         boolean found = false;
         LP lp = null;
-        int index = 0;
-        while(index < lps.size() && !found){
+        int lpIndex = 0;
+        int copyIndex = 0;
+        while(lpIndex < lps.size() && !found){
             LP element = lps.get(index);
+            while(copyIndex < lps.size() && !found)
+            
             if(element.getBarcode() == barcode){
                 found = true;
                 lp = element;

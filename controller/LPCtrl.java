@@ -1,6 +1,7 @@
 package controller;
 import model.LPContainer;
 import model.LP;
+import model.Copy;
 import java.util.Date;
 
 
@@ -24,14 +25,23 @@ public class LPCtrl
 
     }
 
-    public void createLP(int barcode, String title, String artist, int publicationYear, String condition, double purchasePrice){
-        LP lp = new LP(barcode, title, artist, publicationYear, condition, purchasePrice);
-        addLP(lp);
-    }
+    // public void createCopy(int serialNumber, String condition, double purchasePrice){
+        // Copy copy = new Copy(serialNumber, condition, purchasePrice);
+        // addCopy(copy);
+    // }
     
-    public void addLP(LP lp){
-        lpContainer.addLP(lp);
-    }
+    // public void createLP(int barcode, String title, String artist, int publicationYear){
+        // LP lp = new LP(barcode, title, artist, publicationYear);
+        // addLP(lp);
+    // }
+    
+    // private void addCopy(Copy copy){
+        // lpContainer.addCopy(copy);
+    // }
+    
+    // private void addLP(LP lp){
+        // lpContainer.addLP(lp);
+    // }
     
     public LP findLpByBarcode(int barcode){
         return lpContainer.findLpByBarcode(barcode);

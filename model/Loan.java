@@ -12,16 +12,16 @@ public class Loan
 {
     // instance variables - replace the example below with your own
     private Person person;
-    private LP lp;
-
+    private ArrayList<Copy> copies;
+    
     /**
      * Constructor for objects of class Loan
      */
-    public Loan(Person person, LP lp)
+    public Loan(Person person, Copy copy)
     {
         // initialise instance variables
         this.person = person;
-        this.lp = lp;
+        copies = new ArrayList<>();
     }
 
     /*
@@ -31,17 +31,17 @@ public class Loan
         this.person = person;
     }
     
-    public void setLp(LP lp){
-        this.lp = lp;
+    public void addCopy(Copy copy){
+        copies.add(copy);
     }
     
     public Person getPerson(){
         return person;
     }
     
-    public LP getLP(){
-        return lp;
-    }
+    // public Copy getCopy(){
+        // return copy;
+    // }
     
     public String getPersonName(){
         Person person = getPerson();
@@ -49,7 +49,10 @@ public class Loan
     }
     
     public String getLPTitle(){
-        LP lp = getLP();
-        return lp.getTitle();
+        String title = "";
+        for(Copy element: copies){
+            title = element.getTitle();
+        }
+        return title;
     }
 }

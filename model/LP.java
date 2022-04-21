@@ -1,4 +1,5 @@
 package model;
+import java.util.ArrayList;
 
 
 /**
@@ -14,23 +15,25 @@ public class LP
     private String title;
     private String artist;
     private int publicationYear;
-    private String condition; //kan også vælges fra array
-    private double purchasePrice;
+    private ArrayList<Copy> copies;
 
     /**
      * Constructor for objects of class Lp
      */
-    public LP(int barcode, String title, String artist, int publicationYear, String condition, double purchasePrice)
+    public LP(int barcode, String title, String artist, int publicationYear)
     {
         // initialise instance variables
         this.barcode = barcode;
         this.title = title;
         this.artist = artist;
         this.publicationYear = publicationYear;
-        this.condition = condition;
-        this.purchasePrice = purchasePrice;
+        copies = new ArrayList<>();
     }
 
+    public void addCopy(Copy copy){
+        copies.add(copy);
+    }
+    
     public int getBarcode(){
         return barcode;
     }
@@ -47,24 +50,22 @@ public class LP
         return publicationYear;
     }
     
-    public String getCondition(){
-        return condition;
-    }
+    // public int findCopyBySerialNumber(){
+        // boolean found = false;
+        // while(index < copies.size() && !found){
+            
+        // }
+    // }
     
-    public double getPurchasePrice(){
-        return purchasePrice;
-    }
+    // public void printLPShort(){
+        // System.out.println("Pladens titel: " + title);
+        // System.out.println("Kunstneren: " + artist);
+        // copy.printCopyShort();
+    // }
     
-    public void printLPShort(){
-        System.out.println("Pladens stregkode: " + barcode);
-        System.out.println("Pladens titel: " + title);
-        System.out.println("Kunstneren: " + artist);
-    }
-    
-    public void printLPLong(){
-        printLPShort();
-        System.out.println("Pladens udgivelsesår: " + publicationYear);
-        System.out.println("Pladens stand: " + condition);
-        System.out.println("Pladens indkøbspris: " + purchasePrice);
-    }
+    // public void printLPLong(){
+        // copy.printCopyLong();
+        // System.out.println("Pladens stregkode: " + barcode);
+        // System.out.println("Pladens udgivelsesår: " + publicationYear);
+    // }
 }
