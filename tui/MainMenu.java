@@ -59,15 +59,15 @@ public class MainMenu {
     private int writeMainMenu() {
         Scanner keyboard = new Scanner(System.in);
         System.out.println("****** Hovedmenu ******");
-        System.out.println(" (1) Find låner");
+        System.out.println(" (1) Find laaner");
         System.out.println(" (2) Find LP");
-        System.out.println(" (3) Udlånsmenu");
+        System.out.println(" (3) Udlaansmenu");
         System.out.println(" (9) Generer testdata");// will generate testdata, delete in final version
         System.out.println(" (0) Afslut programmet");
         System.out.print("\n Valg:");
         
         while (!keyboard.hasNextInt()) {
-            System.out.println("Input skal være et tal - prøv igen");
+            System.out.println("Input skal vaere et tal - proev igen");
             keyboard.nextLine();
         }
         int choice = keyboard.nextInt();
