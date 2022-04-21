@@ -20,8 +20,8 @@ public class Loan
     public Loan(Person person, LP lp)
     {
         // initialise instance variables
-        person = null;
-        lp = null;
+        this.person = person;
+        this.lp = lp;
     }
 
     /*
