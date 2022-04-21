@@ -48,14 +48,40 @@ public class LoanMenu {
             }
         }
     }
+    public void verifyLoan(){
+        boolean running = true;
+        while (running) {
+            int choice = writeVerifyMenu();
+            switch(choice){
+                case 1:
+                loanCtrl.finishLoan();
+                break;
+                case 0:
+                System.out.println("Ikke implementeret");    
+                
+                break;
+            }
+        }
+        
+    }
     
     private int writeLoanMenu() {
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("****** Udlånsmenu ******");
-        System.out.println(" (1) Opret lån");
+        System.out.println("****** Udlaensmenu ******");
+        System.out.println(" (1) Opret laen");
         System.out.println(" (0) Tilbage");
         System.out.print("\n Vælg:");
         int choice = getIntegerFromUser(keyboard);
+        return choice;
+    }
+    
+    private int writeVerifyMenu() {
+        Scanner keyboard = new Scanner(System.in);
+        loanCtrl.getLPTitle();
+        loanCtrl.getLoanerName();
+        System.out.println(" (1) Faerdigoer");
+        System.out.println(" (0) annuller");
+        int choice = keyboard.nextInt();
         return choice;
     }
     
@@ -86,5 +112,6 @@ public class LoanMenu {
         LP lp = loanCtrl.findLpByBarcode(inputLp());
         loanCtrl.createLoan(person, lp);
     }
+    
 }
 

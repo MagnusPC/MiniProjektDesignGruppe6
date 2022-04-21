@@ -34,4 +34,22 @@ public class Loan
     public void setLp(LP lp){
         this.lp = lp;
     }
+    
+    public Person getPerson(){
+        return person;
+    }
+    
+    public LP getLP(){
+        return lp;
+    }
+    
+    public String getLoanerName(){
+        Person person = getPerson();
+        return person.getName();
+    }
+    
+    public String getLPTitle(){
+        LP lp = getLP();
+        return lp.getTitle();
+    }
 }

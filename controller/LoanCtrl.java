@@ -1,5 +1,6 @@
 package controller;
 import model.*;
+import java.util.Scanner;
 
 public class LoanCtrl {
     private PersonCtrl personCtrl;
@@ -36,5 +37,27 @@ public class LoanCtrl {
         
     }
     
+    //TODO change Loaner to person
+    /**
+     * Returns the name connected to the loan
+     */
+    public void getLoanerName(){
+         if(currentLoan == null){
+            System.out.println("There are no loaner connected to the loan");
+        }
+        String loanername = currentLoan.getLoanerName();
+        System.out.println("To: " + loanername);
+    }
+    
+    /**
+     * Returns the LP's title connected to the loan
+     */
+    public void getLPTitle(){
+        if(currentLoan == null){
+            System.out.println("There are no LP connected to the loan");
+        }
+        String lptitle = currentLoan.getLPTitle();
+        System.out.println("You are trying to loan: " + lptitle);
+    }
  
 }
