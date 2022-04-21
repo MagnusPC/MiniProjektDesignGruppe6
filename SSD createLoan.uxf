@@ -4,8 +4,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>640</x>
-      <y>230</y>
+      <x>530</x>
+      <y>190</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -15,8 +15,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>270</y>
+      <x>100</x>
+      <y>230</y>
       <w>30</w>
       <h>540</h>
     </coordinates>
@@ -26,8 +26,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>680</x>
-      <y>260</y>
+      <x>570</x>
+      <y>220</y>
       <w>30</w>
       <h>550</h>
     </coordinates>
@@ -37,94 +37,94 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
+      <x>100</x>
+      <y>220</y>
+      <w>500</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+createLoan()
+</panel_attributes>
+    <additional_attributes>480.0;30.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
+      <y>440</y>
+      <w>500</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+Return LP</panel_attributes>
+    <additional_attributes>10.0;30.0;480.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
       <y>270</y>
       <w>500</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
-createLoan()
-</panel_attributes>
-    <additional_attributes>480.0;20.0;10.0;20.0</additional_attributes>
+addPerson(phone)</panel_attributes>
+    <additional_attributes>480.0;30.0;10.0;30.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>490</y>
-      <w>500</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-Return LP</panel_attributes>
-    <additional_attributes>10.0;20.0;480.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>210</x>
+      <x>100</x>
       <y>320</y>
       <w>500</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
-addPerson(phone)</panel_attributes>
-    <additional_attributes>480.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>210</x>
-      <y>370</y>
-      <w>500</w>
-      <h>40</h>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 Return person</panel_attributes>
-    <additional_attributes>10.0;20.0;480.0;20.0</additional_attributes>
+    <additional_attributes>10.0;30.0;480.0;30.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>430</y>
+      <x>100</x>
+      <y>380</y>
       <w>500</w>
-      <h>40</h>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 addLP(barcode)</panel_attributes>
-    <additional_attributes>480.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>480.0;30.0;10.0;30.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>550</y>
+      <x>100</x>
+      <y>500</y>
       <w>500</w>
-      <h>40</h>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 finishLoan()</panel_attributes>
-    <additional_attributes>480.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>480.0;30.0;10.0;30.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>600</y>
+      <x>100</x>
+      <y>550</y>
       <w>500</w>
-      <h>40</h>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 Send mail</panel_attributes>
-    <additional_attributes>10.0;20.0;480.0;20.0</additional_attributes>
+    <additional_attributes>10.0;30.0;480.0;30.0</additional_attributes>
   </element>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>180</x>
-      <y>160</y>
-      <w>80</w>
+      <x>60</x>
+      <y>120</y>
+      <w>100</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>Indehaver</panel_attributes>
