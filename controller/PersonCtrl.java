@@ -31,13 +31,10 @@ public class PersonCtrl
         Person person = new Person(name, address, zipCode, city, phone);
         addPerson(person);
     }
-<<<<<<< Updated upstream
-
-    private void addPerson(Person person){
     /**
      * add person to the personContainer
      */
-    public void addPerson(Person person){
+    private void addPerson(Person person){
         personContainer.addPerson(person);
     }
     

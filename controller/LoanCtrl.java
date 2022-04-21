@@ -33,7 +33,7 @@ public class LoanCtrl {
     public LP findLpByBarcode(int barcode){
         return lpCtrl.findLpByBarcode(barcode);
     }
-<<<<<<< Updated upstream
+
     
     // public void createLoan(Person person, LP lp){
         // Loan loan = new Loan(person, lp);
