@@ -17,7 +17,7 @@ public class LP
     private int publicationYear;
     //TODO: Condition, check i loops.
     private ArrayList<Copy> copies;
-    private Copy copy;
+    private Copy copy; //failsave til print commands, bør ændres
 
     /**
      * Constructor for objects of class Lp

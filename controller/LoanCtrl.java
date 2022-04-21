@@ -35,13 +35,8 @@ public class LoanCtrl {
         return lpCtrl.findCopyBySerialNo(serialNumber);
     }
 
-    
-    // public void createLoan(Person person, LP lp){
-        // Loan loan = new Loan(person, lp);
-        // currentLoan = loan;
-    // }
-    
     public void createLoan(Person person, Copy copy){
+        //TODO få loanctrl til at adde copies (evt med kald til findBy...)
         Loan loan = new Loan(person, copy);
         currentLoan = loan;
     }

@@ -128,9 +128,9 @@ public class LoanMenu {
     }
     
     private void createLoan(){
-        Person person = loanCtrl.findPersonByPhone(inputPerson());
-        Copy copy = loanCtrl.findCopyBySerialNo(inputCopy());
-        loanCtrl.createLoan(person, copy);
+        Person p = loanCtrl.findPersonByPhone(inputPerson());
+        Copy c = loanCtrl.findCopyBySerialNo(inputCopy());
+        loanCtrl.createLoan(p, c);
     }
     
     // private void createLoan(){
