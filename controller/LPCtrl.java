@@ -14,20 +14,25 @@ public class LPCtrl
 {
     // instance variables - replace the example below with your own
     private LPContainer lpContainer;
+
     /**
      * Constructor for objects of class PersonCtrl
      */
     public LPCtrl(){
         // initialise instance variables
         lpContainer = LPContainer.getInstance(); 
+
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
+    public void createLP(int barcode, String title, String artist, int publicationYear, String condition, double purchasePrice){
+        LP lp = new LP(barcode, title, artist, publicationYear, condition, purchasePrice);
+        addLP(lp);
+    }
+    
+    public void addLP(LP lp){
+        lpContainer.addLP(lp);
+    }
+    
     public LP findLpByBarcode(int barcode){
         return lpContainer.findLpByBarcode(barcode);
     }
