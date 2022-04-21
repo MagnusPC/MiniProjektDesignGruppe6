@@ -1,12 +1,14 @@
 package controller;
 import model.*;
 import java.util.Scanner;
+import java.util.Date;
 
 public class LoanCtrl {
     private PersonCtrl personCtrl;
     private LPCtrl lpCtrl;
     private LoanContainer loanContainer;
     private Loan currentLoan;
+    private Date date;
     /**
      * 
      */
@@ -15,6 +17,11 @@ public class LoanCtrl {
         lpCtrl = new LPCtrl();
         loanContainer = LoanContainer.getInstance();
         currentLoan = null;
+        date = new Date();
+    }
+    
+    public String getDate(){
+        return date.toString();
     }
     
     public Person findPersonByPhone(String phone){
@@ -33,20 +40,18 @@ public class LoanCtrl {
     public void finishLoan(){
         loanContainer.addLoan(currentLoan);
         System.out.println("Loan has been archived ");
-        System.out.println("The renting period is: " + lpCtrl.getDate());
-        
+        System.out.println("The renting period is 14 days from today: " + getDate());
     }
     
-    //TODO change Loaner to person
     /**
      * Returns the name connected to the loan
      */
-    public void getLoanerName(){
+    public void getPersonName(){
          if(currentLoan == null){
-            System.out.println("There are no loaner connected to the loan");
+            System.out.println("There are no person connected to the loan");
         }
-        String loanername = currentLoan.getLoanerName();
-        System.out.println("To: " + loanername);
+        String personName = currentLoan.getPersonName();
+        System.out.println("To: " + personName);
     }
     
     /**

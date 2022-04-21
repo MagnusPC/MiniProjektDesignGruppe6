@@ -78,7 +78,7 @@ public class LoanMenu {
     private int writeVerifyMenu() {
         Scanner keyboard = new Scanner(System.in);
         loanCtrl.getLPTitle();
-        loanCtrl.getLoanerName();
+        loanCtrl.getPersonName();
         System.out.println(" (1) Faerdigoer");
         System.out.println(" (0) annuller");
         int choice = keyboard.nextInt();
@@ -111,6 +111,7 @@ public class LoanMenu {
         Person person = loanCtrl.findPersonByPhone(inputPerson());
         LP lp = loanCtrl.findLpByBarcode(inputLp());
         loanCtrl.createLoan(person, lp);
+        verifyLoan();
     }
     
 }

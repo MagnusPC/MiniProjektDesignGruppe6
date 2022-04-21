@@ -43,7 +43,7 @@ public class Loan
         return lp;
     }
     
-    public String getLoanerName(){
+    public String getPersonName(){
         Person person = getPerson();
         return person.getName();
     }
