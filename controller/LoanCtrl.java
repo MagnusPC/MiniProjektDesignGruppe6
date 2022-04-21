@@ -27,7 +27,7 @@ public class LoanCtrl {
     /**
      * Finds a person in our personContainer with the phone attribute
      */
-    public Person findPersonByPhone(int phone){
+    public Person findPersonByPhone(String phone){
         return personCtrl.findPersonByPhone(phone);
     }
     //TODO f� den til at tilf�je til currentLoan
@@ -41,7 +41,7 @@ public class LoanCtrl {
         // currentLoan = loan;
     // }
     
-    public void createLoan(int phone, int serialNumber){
+    public void createLoan(String phone, int serialNumber){
         Loan loan = new Loan(findPersonByPhone(phone), findCopyBySerialNo(serialNumber));
         currentLoan = loan;
     }

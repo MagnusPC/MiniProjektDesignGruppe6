@@ -14,12 +14,12 @@ public class Person
     private String address;
     private int zipCode;
     private String city;
-    private int phone;
+    private String phone;
 
     /**
      * Constructor for objects of class Person
      */
-    public Person(String name, String address, int zipCode, String city, int phone)
+    public Person(String name, String address, int zipCode, String city, String phone)
     {
         // initialise instance variables
         this.name = name;
@@ -45,7 +45,7 @@ public class Person
         return city;
     }
     
-    public int getPhone(){
+    public String getPhone(){
         return phone;
     }
     

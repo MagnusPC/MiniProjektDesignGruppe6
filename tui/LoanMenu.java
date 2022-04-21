@@ -107,11 +107,12 @@ public class LoanMenu {
     }
     /**
      * Takes input from keyboard and returns a String
+     * Input must be with ""
      */
-    private int inputPerson(){
+    private String inputPerson(){
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Indtast personens telefonnummer: ");
-        int phone = keyboard.nextInt();
+        String phone = keyboard.nextLine();
         return phone;
     }
     /**
@@ -127,7 +128,7 @@ public class LoanMenu {
     private void createLoan(){
         Person person = loanCtrl.findPersonByPhone(inputPerson());
         Copy copy = loanCtrl.findCopyBySerialNo(inputCopy());
-        loanCtrl.createLoan(person, copy);
+        //loanCtrl.createLoan(person, copy);
         verifyLoan();
     }
     

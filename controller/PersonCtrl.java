@@ -43,7 +43,7 @@ public class PersonCtrl
     /**
      * Finds a person from a phone
      */
-    public Person findPersonByPhone(int phone){
+    public Person findPersonByPhone(String phone){
         return personContainer.findPersonByPhone(phone);
     }
     }
