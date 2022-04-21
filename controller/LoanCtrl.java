@@ -23,14 +23,17 @@ public class LoanCtrl {
     public String getDate(){
         return date.toString();
     }
-    
+    /**
+     * Finds a person in our personContainer with the phone attribute
+     */
     public Person findPersonByPhone(String phone){
         return personCtrl.findPersonByPhone(phone);
     }
-    
+    //TODO f� den til at tilf�je til currentLoan
     public LP findLpByBarcode(int barcode){
         return lpCtrl.findLpByBarcode(barcode);
     }
+<<<<<<< Updated upstream
     
     // public void createLoan(Person person, LP lp){
         // Loan loan = new Loan(person, lp);
@@ -41,7 +44,9 @@ public class LoanCtrl {
         Loan loan = new Loan(findPersonByPhone(phone), findLpByBarcode(serialNumber));
         currentLoan = loan;
     }
-    
+    /**
+     * Saves the loan in the loanContainer and gives feedback to user
+     */
     public void finishLoan(){
         loanContainer.addLoan(currentLoan);
         System.out.println("Loan has been archived ");

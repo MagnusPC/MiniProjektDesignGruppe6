@@ -30,7 +30,10 @@ public class LoanMenu {
     public void start() {
         loanMenu();
     }
-
+    
+    /**
+     * The functionality of the loan menu
+     */
     private void loanMenu() {
         boolean running = true;
         while (running) {
@@ -48,6 +51,10 @@ public class LoanMenu {
             }
         }
     }
+    /**
+     * The functionality of our verifier just before a loan is finished
+     * Takes input from keyboard
+     */
     public void verifyLoan(){
         boolean running = true;
         while (running) {
@@ -64,7 +71,10 @@ public class LoanMenu {
         }
         
     }
-    
+    /**
+     * the visual from the loan menu
+     * Takes input form keyboard
+     */
     private int writeLoanMenu() {
         Scanner keyboard = new Scanner(System.in);
         System.out.println("****** Udlaensmenu ******");
@@ -74,7 +84,10 @@ public class LoanMenu {
         int choice = getIntegerFromUser(keyboard);
         return choice;
     }
-    
+    /**
+     * the visual from the verifyLoan menu
+     * takes input from keyboard
+     */
     private int writeVerifyMenu() {
         Scanner keyboard = new Scanner(System.in);
         loanCtrl.getLPTitle();
@@ -92,14 +105,18 @@ public class LoanMenu {
         }
         return keyboard.nextInt();
     }
-    
+    /**
+     * Takes input from keyboard and returns a String
+     */
     private String inputPerson(){
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Indtast personens telefonnummer: ");
         String phone = keyboard.nextLine();
         return phone;
     }
-    
+    /**
+     * Takes input from keyboard and returns an int
+     */
     private int inputLp(){
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Indtast pladens stregkode: ");

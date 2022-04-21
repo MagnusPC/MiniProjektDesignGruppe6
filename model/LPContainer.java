@@ -23,7 +23,10 @@ public class LPContainer
         // initialise instance variables
         lps = new ArrayList<>();
     }
-
+    /**
+     * Static method because its a simpleton
+     * So it doesn't make a new instance of LPContainer
+     */
     public static LPContainer getInstance(){
         if(instance == null){
             instance = new LPContainer();
@@ -31,6 +34,9 @@ public class LPContainer
         return instance;
     }
     
+    /**
+     * Adds a LP to the LPContainer
+     */
     public void addLP(LP lp){
         lps.add(lp);
     }

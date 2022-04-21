@@ -24,15 +24,26 @@ public class PersonCtrl
         personContainer = new PersonContainer(); 
     }
     
+    /**
+     * Creates a person with input form user
+     */
     public void createPerson(String name, String address, int zipCode, String city, String phone){
         Person person = new Person(name, address, zipCode, city, phone);
         addPerson(person);
     }
+<<<<<<< Updated upstream
 
     private void addPerson(Person person){
+    /**
+     * add person to the personContainer
+     */
+    public void addPerson(Person person){
         personContainer.addPerson(person);
     }
     
+    /**
+     * Finds a person from a phone
+     */
     public Person findPersonByPhone(String phone){
         return personContainer.findPersonByPhone(phone);
     }

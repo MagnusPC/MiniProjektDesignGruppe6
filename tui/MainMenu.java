@@ -27,7 +27,9 @@ public class MainMenu {
     public void start() {
         mainMenu();
     }
-    
+    /**
+     * The first terminal at the moment can start the loaning process
+     */
     private void mainMenu() {
         boolean running = true;
         while (running) {
@@ -55,7 +57,10 @@ public class MainMenu {
             }
         }
     }
-
+    /**
+     * Writes to the user the possibilities that he has and returns the choice
+     * The written part of the mainMenu
+     */
     private int writeMainMenu() {
         Scanner keyboard = new Scanner(System.in);
         System.out.println("****** Hovedmenu ******");

@@ -43,11 +43,17 @@ public class Loan
         // return copy;
     // }
     
+    /**
+     * gets the name of the person connected to the loan
+     */
     public String getPersonName(){
         Person person = getPerson();
         return person.getName();
     }
     
+    /**
+     * gets the title of the LP connected to the loan
+     */
     public String getLPTitle(){
         String title = "";
         for(Copy element: copies){

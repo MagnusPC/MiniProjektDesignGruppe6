@@ -24,6 +24,7 @@ public class LPCtrl
         lpContainer = LPContainer.getInstance(); 
 
     }
+<<<<<<< Updated upstream
 
     // public void createCopy(int serialNumber, String condition, double purchasePrice){
         // Copy copy = new Copy(serialNumber, condition, purchasePrice);
@@ -43,6 +44,9 @@ public class LPCtrl
         // lpContainer.addLP(lp);
     // }
     
+    /**
+     * finds a LP from the barcode
+     */
     public LP findLpByBarcode(int barcode){
         return lpContainer.findLpByBarcode(barcode);
     }

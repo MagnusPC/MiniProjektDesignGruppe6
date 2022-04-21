@@ -22,11 +22,17 @@ public class LoanContainer{
         loans = new ArrayList<>();
     }
 
-
+    /**
+     * Adds a loan to the loanContainer
+     */
     public boolean addLoan(Loan loan){
         return loans.add(loan);
     }
     
+    /**
+     * Static method because its a simpleton
+     * So it doesn't make a new instance of LoanContainer
+     */
     public static LoanContainer getInstance(){
         if (instance == null){
             instance = new LoanContainer();
