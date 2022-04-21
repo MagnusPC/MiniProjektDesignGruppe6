@@ -40,6 +40,9 @@ public class LPContainer
                 found = true;
                 lp = element;
             }
+            else {
+                index++;
+            }
         }
         return lp;
     }

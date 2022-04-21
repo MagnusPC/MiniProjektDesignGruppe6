@@ -40,6 +40,9 @@ public class PersonContainer
                 found = true;
                 person = element;
             }
+            else {
+                index++;
+            }
         }
         return person;
     }
