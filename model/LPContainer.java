@@ -41,7 +41,7 @@ public class LPContainer
         lps.add(lp);
     }
     
-    public Copy findLpBySerialNumber(int serialNumber){
+    public Copy findCopyBySerialNo(int serialNumber){
         boolean found = false;
         Copy lpCopy = null;
         int index = 0;

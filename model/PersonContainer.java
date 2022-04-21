@@ -45,13 +45,13 @@ public class PersonContainer
      * Finds a person from a phone
      * Returns person
      */
-    public Person findPersonByPhone(String phone){
+    public Person findPersonByPhone(int phone){
         boolean found = false;
         Person person = null;
         int index = 0;
         while(index < persons.size() && !found){
             Person element = persons.get(index);
-            if(element.getPhone().equals(phone)){
+            if(element.getPhone() == phone){
                 found = true;
                 person = element;
             }

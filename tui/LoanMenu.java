@@ -2,7 +2,7 @@ package tui;
 import java.util.Scanner;
 import controller.*;
 import model.Person;
-import model.LP;
+import model.Copy;
 
 
 /**
@@ -108,26 +108,26 @@ public class LoanMenu {
     /**
      * Takes input from keyboard and returns a String
      */
-    private String inputPerson(){
+    private int inputPerson(){
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Indtast personens telefonnummer: ");
-        String phone = keyboard.nextLine();
+        int phone = keyboard.nextInt();
         return phone;
     }
     /**
      * Takes input from keyboard and returns an int
      */
-    private int inputLp(){
+    private int inputCopy(){
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("Indtast pladens stregkode: ");
-        int barcode = keyboard.nextInt();
-        return barcode;
+        System.out.println("Indtast pladens serienummer: ");
+        int serialNumber = keyboard.nextInt();
+        return serialNumber;
     }
     
     private void createLoan(){
         Person person = loanCtrl.findPersonByPhone(inputPerson());
-        LP lp = loanCtrl.findLpByBarcode(inputLp());
-        loanCtrl.createLoan(person, lp);
+        Copy copy = loanCtrl.findCopyBySerialNo(inputCopy());
+        loanCtrl.createLoan(person, copy);
         verifyLoan();
     }
     

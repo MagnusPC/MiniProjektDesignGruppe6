@@ -23,15 +23,16 @@ public class LoanCtrl {
     public String getDate(){
         return date.toString();
     }
+    
     /**
      * Finds a person in our personContainer with the phone attribute
      */
-    public Person findPersonByPhone(String phone){
+    public Person findPersonByPhone(int phone){
         return personCtrl.findPersonByPhone(phone);
     }
     //TODO f� den til at tilf�je til currentLoan
-    public LP findLpByBarcode(int barcode){
-        return lpCtrl.findLpByBarcode(barcode);
+    public Copy findCopyBySerialNo(int serialNumber){
+        return lpCtrl.findCopyBySerialNo(serialNumber);
     }
 
     
@@ -40,10 +41,11 @@ public class LoanCtrl {
         // currentLoan = loan;
     // }
     
-    public void createLoan(String phone, int barcode){
-        Loan loan = new Loan(findPersonByPhone(phone), findLpByBarcode(serialNumber));
+    public void createLoan(int phone, int serialNumber){
+        Loan loan = new Loan(findPersonByPhone(phone), findCopyBySerialNo(serialNumber));
         currentLoan = loan;
     }
+    
     /**
      * Saves the loan in the loanContainer and gives feedback to user
      */
