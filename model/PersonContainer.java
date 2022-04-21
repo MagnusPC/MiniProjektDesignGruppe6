@@ -30,6 +30,10 @@ public class PersonContainer
         return instance; 
     }
     
+    public void addPerson(Person person){
+        persons.add(person);
+    }
+    
     public Person findPersonByPhone(String phone){
         boolean found = false;
         Person person = null;
