@@ -32,7 +32,7 @@ public class LoanCtrl {
     public void finishLoan(){
         loanContainer.addLoan(currentLoan);
         System.out.println("Loan has been archived ");
-        System.out.println("The renting period is: ");
+        System.out.println("The renting period is: " + lpCtrl.getDate());
         
     }
     
