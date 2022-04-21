@@ -35,7 +35,7 @@ public class PersonCtrl
     /**
      * add person to the personContainer
      */
-    private void addPerson(Person person){
+    public void addPerson(Person person){
         personContainer.addPerson(person);
     }
     

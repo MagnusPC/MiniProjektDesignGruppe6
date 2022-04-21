@@ -41,8 +41,8 @@ public class LoanCtrl {
         // currentLoan = loan;
     // }
     
-    public void createLoan(String phone, int serialNumber){
-        Loan loan = new Loan(findPersonByPhone(phone), findCopyBySerialNo(serialNumber));
+    public void createLoan(Person person, Copy copy){
+        Loan loan = new Loan(person, copy);
         currentLoan = loan;
     }
     

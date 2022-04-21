@@ -15,8 +15,9 @@ import org.junit.jupiter.api.Test;
  */
 public class TryMe
 {
-    private controller.PersonCtrl personCt1;
-    private controller.LPCtrl lPCtrl1;
+    private controller.LoanCtrl loanCtrl1;
+    private model.Person person1;
+    private model.Copy copy1;
 
     /**
      * Default constructor for test class TryMe
@@ -24,8 +25,10 @@ public class TryMe
     public TryMe()
     {
        //TODO to af hvers
-       personCt1 = new controller.PersonCtrl(); 
-       lPCtrl1 = new controller.LPCtrl();
+       loanCtrl1 = new controller.LoanCtrl();
+       person1 = new model.Person("bob", "vej 3", 9000, "bykær", "1234");
+       //person2 = new model.Person("bente", "gade 8", 8000, "metropolis", "9999");
+       copy1 = new model.Copy(001, "fjong", 99.99);
     }
 
     /**
@@ -36,10 +39,7 @@ public class TryMe
     @BeforeEach
     public void setUp()
     {
-        personCt1.createPerson("bob", "vej 3", 9000, "bykær", "1234");
-        personCt1.createPerson("bente", "gade 8", 8000, "citycity", "9999");
-        lPCtrl1.createLP(001, "album1", "artist1", 1999, "fjong", 99.99);
-        lPCtrl1.createLP(002, "album2", "artist2", 2010, "ringe", 14.95);
+        
     }
 
     /**
