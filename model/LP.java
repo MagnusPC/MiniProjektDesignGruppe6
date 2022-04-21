@@ -34,4 +34,24 @@ public class LP
     public int getBarcode(){
         return barcode;
     }
+    
+    public String getTitle(){
+        return title;
+    }
+    
+    public String getArtist(){
+        return artist;
+    }
+    
+    public int getPubYear(){
+        return publicationYear;
+    }
+    
+    public String getCondition(){
+        return condition;
+    }
+    
+    public double getPurchasePrice(){
+        return purchasePrice;
+    }
 }
