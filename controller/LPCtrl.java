@@ -1,6 +1,7 @@
 package controller;
 import model.LPContainer;
 import model.LP;
+import java.util.Date;
 
 
 /**
@@ -13,14 +14,18 @@ public class LPCtrl
 {
     // instance variables - replace the example below with your own
     private LPContainer lpContainer;
-    
+    private Date date;
     /**
      * Constructor for objects of class PersonCtrl
      */
-    public LPCtrl()
-    {
+    public LPCtrl(){
         // initialise instance variables
         lpContainer = LPContainer.getInstance(); 
+        date = new Date();
+    }
+    
+    public String getDate(){
+        return date.toString();
     }
 
     /**

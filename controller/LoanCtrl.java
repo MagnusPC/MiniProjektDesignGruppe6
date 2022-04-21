@@ -5,7 +5,7 @@ public class LoanCtrl {
     private PersonCtrl personCtrl;
     private LPCtrl lpCtrl;
     private LoanContainer loanContainer;
-    
+    private Loan currentLoan;
     /**
      * 
      */
@@ -13,6 +13,7 @@ public class LoanCtrl {
         personCtrl = new PersonCtrl();
         lpCtrl = new LPCtrl();
         loanContainer = LoanContainer.getInstance();
+        currentLoan = null;
     }
     
     public Person findPersonByPhone(String phone){
@@ -25,10 +26,15 @@ public class LoanCtrl {
     
     public void createLoan(Person person, LP lp){
         Loan loan = new Loan(person, lp);
-        loanContainer.addLoan(loan);
+        currentLoan = loan;
     }
     
-    // public boolean finishLoan() {
+    public void finishLoan(){
+        loanContainer.addLoan(currentLoan);
+        System.out.println("Loan has been archived ");
+        System.out.println("The renting period is: ");
         
-    // }
+    }
+    
+ 
 }
