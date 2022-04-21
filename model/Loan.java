@@ -57,7 +57,7 @@ public class Loan
     public String getLPTitle(){
         String title = "";
         for(Copy element: copies){
-            title = element.getTitle();
+            //title = element.getTitle();
         }
         return title;
     }
