@@ -30,6 +30,10 @@ public class LPContainer
         return instance;
     }
     
+    public void addLP(LP lp){
+        lps.add(lp);
+    }
+    
     public LP findLpByBarcode(int barcode){
         boolean found = false;
         LP lp = null;
