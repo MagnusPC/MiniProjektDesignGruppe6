@@ -14,7 +14,7 @@ public class PersonCtrl
     // instance variables - replace the example below with your own
     
     private PersonContainer personContainer;
-    private ArrayList personList;
+    
     /**
      * Constructor for objects of class PersonCtrl
      */
@@ -22,7 +22,6 @@ public class PersonCtrl
     {
         // initialise instance variables
         personContainer = new PersonContainer(); 
-        personList = new ArrayList<>();
     }
 
     /**
