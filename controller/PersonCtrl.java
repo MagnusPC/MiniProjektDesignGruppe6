@@ -24,7 +24,6 @@ public class PersonCtrl
         personContainer = new PersonContainer(); 
     }
     
-    
     /**
      * Creates a person with input form user
      */

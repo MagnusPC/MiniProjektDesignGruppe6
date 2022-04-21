@@ -20,7 +20,6 @@ public class MainMenu {
     public MainMenu() {
         // initialise instance variables
         loanMenu = new LoanMenu();
-        
        
     }
     

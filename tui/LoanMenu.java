@@ -105,6 +105,7 @@ public class LoanMenu {
         }
         return keyboard.nextInt();
     }
+    
     /**
      * Takes input from keyboard and returns a String
      * Input must be with ""
@@ -115,6 +116,7 @@ public class LoanMenu {
         String phone = keyboard.nextLine();
         return phone;
     }
+    
     /**
      * Takes input from keyboard and returns an int
      */
@@ -128,7 +130,7 @@ public class LoanMenu {
     private void createLoan(){
         Person person = loanCtrl.findPersonByPhone(inputPerson());
         Copy copy = loanCtrl.findCopyBySerialNo(inputCopy());
-        //loanCtrl.createLoan(person, copy);
+        loanCtrl.createLoan(person, copy);
         verifyLoan();
     }
     

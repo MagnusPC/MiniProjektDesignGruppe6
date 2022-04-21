@@ -62,8 +62,9 @@ public class LoanCtrl {
          if(currentLoan == null){
             System.out.println("There are no person connected to the loan");
         }
-        String personName = currentLoan.getPersonName();
-        System.out.println("To: " + personName);
+        //TODO RET FEJLEN HER - metode kalder navnet på sig selv
+        //String personName = currentLoan.getPersonName();
+        //System.out.println("To: " + personName);
     }
     
     /**
@@ -73,8 +74,9 @@ public class LoanCtrl {
         if(currentLoan == null){
             System.out.println("There are no LP connected to the loan");
         }
-        String lptitle = currentLoan.getLPTitle();
-        System.out.println("You are trying to loan: " + lptitle);
+        //TODO samme som ovenstående
+        //String lptitle = currentLoan.getLPTitle();
+        //System.out.println("You are trying to loan: " + lptitle);
     }
  
 }

@@ -35,9 +35,9 @@ public class Loan
         copies.add(copy);
     }
     
-    public Person getPerson(){
-        return person;
-    }
+    // public Person getPerson(){
+        // return person;
+    // }
     
     // public Copy getCopy(){
         // return copy;
@@ -47,7 +47,6 @@ public class Loan
      * gets the name of the person connected to the loan
      */
     public String getPersonName(){
-        Person person = getPerson();
         return person.getName();
     }
     
@@ -56,9 +55,7 @@ public class Loan
      */
     public String getLPTitle(){
         String title = "";
-        for(Copy element: copies){
-            //title = element.getTitle();
-        }
+        //TODO foreach loop eller
         return title;
     }
 }
