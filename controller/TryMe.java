@@ -39,7 +39,7 @@ public class TryMe
     @BeforeEach
     public void setUp()
     {
-        
+        loanCtrl1.createLoan(person1, copy1);
     }
 
     /**
