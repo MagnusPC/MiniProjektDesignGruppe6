@@ -29,6 +29,22 @@ public class Person
         this.phone = phone;
     }
 
+    public String getName(){
+        return name;
+    }
+    
+    public String getAddress(){
+        return address;
+    }
+    
+    public int getZipCode(){
+        return zipCode;
+    }
+    
+    public String getCity(){
+        return city;
+    }
+    
     public String getPhone(){
         return phone;
     }
