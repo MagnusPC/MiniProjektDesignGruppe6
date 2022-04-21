@@ -10,15 +10,23 @@ package model;
 public class Person
 {
     // instance variables - replace the example below with your own
+    private String name;
+    private String address;
+    private int zipCode;
+    private String city;
     private String phone;
 
     /**
      * Constructor for objects of class Person
      */
-    public Person()
+    public Person(String name, String address, int zipCode, String city, String phone)
     {
         // initialise instance variables
-        phone = "1234";
+        this.name = name;
+        this.address = address;
+        this.zipCode = zipCode;
+        this.city = city;
+        this.phone = phone;
     }
 
     public String getPhone(){
