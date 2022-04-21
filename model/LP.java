@@ -54,4 +54,17 @@ public class LP
     public double getPurchasePrice(){
         return purchasePrice;
     }
+    
+    public void printLPShort(){
+        System.out.println("Pladens stregkode: " + barcode);
+        System.out.println("Pladens titel: " + title);
+        System.out.println("Kunstneren: " + artist);
+    }
+    
+    public void printLPLong(){
+        printLPShort();
+        System.out.println("Pladens udgivelsesår: " + publicationYear);
+        System.out.println("Pladens stand: " + condition);
+        System.out.println("Pladens indkøbspris: " + purchasePrice);
+    }
 }
