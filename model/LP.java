@@ -17,6 +17,7 @@ public class LP
     private int publicationYear;
     //TODO: Condition, check i loops.
     private ArrayList<Copy> copies;
+    private Copy copy;
 
     /**
      * Constructor for objects of class Lp
@@ -51,22 +52,30 @@ public class LP
         return publicationYear;
     }
     
-    // public int findCopyBySerialNumber(){
-        // boolean found = false;
-        // while(index < copies.size() && !found){
-            
-        // }
-    // }
+    public Copy findCopyBySerialNo(int serialNumber){
+        boolean found = false;
+        Copy copy = null;
+        int index = 0;
+        while(index < copies.size() && !found){
+            Copy element = copies.get(index);
+            if(serialNumber == element.getSerialNo()){
+                found = true;
+                copy = element;
+            }
+            index++;
+        }
+        return copy; 
+    }
     
-    // public void printLPShort(){
-        // System.out.println("Pladens titel: " + title);
-        // System.out.println("Kunstneren: " + artist);
-        // copy.printCopyShort();
-    // }
+    public void printLPShort(){
+        System.out.println("Pladens titel: " + title);
+        System.out.println("Kunstneren: " + artist);
+        copy.printCopyShort();
+    }
     
-    // public void printLPLong(){
-        // copy.printCopyLong();
-        // System.out.println("Pladens stregkode: " + barcode);
-        // System.out.println("Pladens udgivelsesår: " + publicationYear);
-    // }
+    public void printLPLong(){
+        copy.printCopyLong();
+        System.out.println("Pladens stregkode: " + barcode);
+        System.out.println("Pladens udgivelsesår: " + publicationYear);
+    }
 }

@@ -41,23 +41,18 @@ public class LPContainer
         lps.add(lp);
     }
     
-    public LP findLpBySerialNumber(int serialNumber){
+    public Copy findLpBySerialNumber(int serialNumber){
         boolean found = false;
-        LP lp = null;
-        int lpIndex = 0;
-        int copyIndex = 0;
-        while(lpIndex < lps.size() && !found){
+        Copy lpCopy = null;
+        int index = 0;
+        while(index < lps.size() && !found){
             LP element = lps.get(index);
-            while(copyIndex < lps.size() && !found)
-            
-            if(element.getBarcode() == barcode){
+            lpCopy = element.findCopyBySerialNo(serialNumber);
+            if(lpCopy != null){
                 found = true;
-                lp = element;
             }
-            else {
-                index++;
-            }
+            index++;
         }
-        return lp;
+        return lpCopy;
     }
 }
