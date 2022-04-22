@@ -44,7 +44,7 @@ public class MainMenu {
                   loanMenu.start();
                   break;
                 case 9:
-                  runTest();
+                  //runTest();
                   break;
                 case 0:
                   System.out.println("Tak for denne gang.");
@@ -79,6 +79,7 @@ public class MainMenu {
     }
     
     private void runTest(){
+        //crasher
         testCode.setUp();
         testCode.testLoan();
     }
