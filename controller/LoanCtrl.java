@@ -7,7 +7,7 @@ public class LoanCtrl {
     private PersonCtrl personCtrl;
     private LPCtrl lpCtrl;
     private LoanContainer loanContainer;
-    private Loan currentLoan;
+    private ArrayList<Copy> currentLoan;
     private Date date;
     /**
      * 
@@ -16,7 +16,7 @@ public class LoanCtrl {
         personCtrl = new PersonCtrl();
         lpCtrl = new LPCtrl();
         loanContainer = LoanContainer.getInstance();
-        currentLoan = null;
+        currentLoan = new ArrayList<>();
         date = new Date();
     }
     
@@ -35,9 +35,15 @@ public class LoanCtrl {
         return lpCtrl.findCopyBySerialNo(serialNumber);
     }
 
-    public void createLoan(Person person, Copy copy){
+    public ArrayList addCopyBySerialNo(int serialNumber){
+        currentLoan.add(findCopyBySerialNo(serialNumber);    
+        System.out.println("eksemplar er tilføjet"); 
+    }
+    
+    public void createLoan(Person person, ArrayList currentLoan){
         //TODO fÃ¥ loanctrl til at adde copies (evt med kald til findBy...)
-        Loan loan = new Loan(person, copy);
+         this.currentLoan = currentLoan;
+        Loan loan = new Loan(person, currentLoan);
         currentLoan = loan;
     }
     
@@ -73,5 +79,8 @@ public class LoanCtrl {
         //String lptitle = currentLoan.getLPTitle();
         //System.out.println("You are trying to loan: " + lptitle);
     }
- 
+    
+    public ArrayList getCurrentLoan(){
+        return currentLoan;
+    }
 }

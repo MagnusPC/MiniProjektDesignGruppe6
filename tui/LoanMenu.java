@@ -16,7 +16,7 @@ public class LoanMenu {
     private LoanCtrl loanCtrl;
     private PersonCtrl personCtrl;
     private LPCtrl lpCtrl;
-
+    
     /**
      * Constructor for objects of class LoanMenu
      */
@@ -129,9 +129,16 @@ public class LoanMenu {
     
     private void createLoan(){
         Person p = loanCtrl.findPersonByPhone(inputPerson());
+        loanCtrl.addCopys();
         Copy c = loanCtrl.findCopyBySerialNo(inputCopy());
         loanCtrl.createLoan(p, c);
     }
+    
+    private int writeRenewMenu(){
+        Scanner keyboard = new Scanner(System.in);
+        
+    }
+    
     
     // private void createLoan(){
         // Person person = loanCtrl.findPersonByPhone(inputPerson());
