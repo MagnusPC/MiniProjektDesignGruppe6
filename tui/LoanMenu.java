@@ -51,26 +51,26 @@ public class LoanMenu {
             }
         }
     }
-    /**
-     * The functionality of our verifier just before a loan is finished
-     * Takes input from keyboard
-     */
-    public void verifyLoan(){
-        boolean running = true;
-        while (running) {
-            int choice = writeVerifyMenu();
-            switch(choice){
-                case 1:
-                loanCtrl.finishLoan();
-                break;
-                case 0:
-                System.out.println("Ikke implementeret");    
+    // /**
+     // * The functionality of our verifier just before a loan is finished
+     // * Takes input from keyboard
+     // */
+    // public void verifyLoan(){
+        // boolean running = true;
+        // while (running) {
+            // int choice = writeVerifyMenu();
+            // switch(choice){
+                // case 1:
+                // loanCtrl.finishLoan();
+                // break;
+                // case 0:
+                // System.out.println("Ikke implementeret");    
                 
-                break;
-            }
-        }
+                // break;
+            // }
+        // }
         
-    }
+    // }
     /**
      * the visual from the loan menu
      * Takes input form keyboard
@@ -84,19 +84,19 @@ public class LoanMenu {
         int choice = getIntegerFromUser(keyboard);
         return choice;
     }
-    /**
-     * the visual from the verifyLoan menu
-     * takes input from keyboard
-     */
-    private int writeVerifyMenu() {
-        Scanner keyboard = new Scanner(System.in);
-        loanCtrl.getLPTitle();
-        loanCtrl.getPersonName();
-        System.out.println(" (1) Faerdigoer");
-        System.out.println(" (0) annuller");
-        int choice = keyboard.nextInt();
-        return choice;
-    }
+    // /**
+     // * the visual from the verifyLoan menu
+     // * takes input from keyboard
+     // */
+    // private int writeVerifyMenu() {
+        // Scanner keyboard = new Scanner(System.in);
+        // loanCtrl.getLPTitle();
+        // loanCtrl.getPersonName();
+        // System.out.println(" (1) Faerdigoer");
+        // System.out.println(" (0) annuller");
+        // int choice = keyboard.nextInt();
+        // return choice;
+    // }
     
     private int getIntegerFromUser(Scanner keyboard) {
         while (!keyboard.hasNextInt()) {
@@ -129,8 +129,7 @@ public class LoanMenu {
     
     private void createLoan(){
         Person p = loanCtrl.findPersonByPhone(inputPerson());
-        Copy c = loanCtrl.findCopyBySerialNo(inputCopy());
-        loanCtrl.createLoan(p, c);
+        loanCtrl.createLoan(p);
     }
     
     // private void createLoan(){

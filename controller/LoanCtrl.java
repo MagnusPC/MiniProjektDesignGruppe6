@@ -35,10 +35,17 @@ public class LoanCtrl {
         return lpCtrl.findCopyBySerialNo(serialNumber);
     }
 
-    public void createLoan(Person person, Copy copy){
+    public void createLoan(Person person){
         //TODO få loanctrl til at adde copies (evt med kald til findBy...)
-        Loan loan = new Loan(person, copy);
+        Loan loan = new Loan();
         currentLoan = loan;
+    }
+    /**
+     * Sets the person to the loan
+     * @param phone finds the person with the phone connected with the person
+     */
+    public void setPerson(String phone){
+        currentLoan.setPerson(findPersonByPhone(phone));
     }
     
     /**
@@ -50,17 +57,7 @@ public class LoanCtrl {
         System.out.println("The renting period is 14 days from today: " + getDate());
     }
     
-    /**
-     * Returns the name connected to the loan
-     */
-    public void getPersonName(){
-         if(currentLoan == null){
-            System.out.println("There are no person connected to the loan");
-        }
-        //TODO RET FEJLEN HER - metode kalder navnet på sig selv
-        //String personName = currentLoan.getPersonName();
-        //System.out.println("To: " + personName);
-    }
+   
     
     /**
      * Returns the LP's title connected to the loan

@@ -17,20 +17,17 @@ public class Loan
     /**
      * Constructor for objects of class Loan
      */
-    public Loan(Person person, Copy copy)
+    public Loan()
     {
         // initialise instance variables
-        this.person = person;
+        person = null;
         copies = new ArrayList<>();
-        copies.add(copy);
     }
-
+    
     /*
      * sørg for der ikke kan overskrives og person ikke er null
      */
-    public void setPerson(Person person){
-        this.person = person;
-    }
+    
     
     public void addCopy(Copy copy){
         copies.add(copy);
@@ -43,6 +40,9 @@ public class Loan
     // public Copy getCopy(){
         // return copy;
     // }
+    public void setPerson(Person person){
+        this.person = person;
+    }
     
     /**
      * gets the name of the person connected to the loan
