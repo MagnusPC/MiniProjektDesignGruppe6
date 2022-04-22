@@ -34,12 +34,7 @@ public class LPContainer
         return instance;
     }
     
-    /**
-     * Adds a LP to the LPContainer
-     */
-    public void addLP(LP lp){
-        lps.add(lp);
-    }
+   
     
     public Copy findCopyBySerialNumber(int serialNumber){
         boolean found = false;
@@ -47,7 +42,7 @@ public class LPContainer
         int index = 0;
         while(index < lps.size() && !found){
             LP lp = lps.get(index);
-            lpCopy = lp.findCopyBySerialNo(serialNumber);
+            lpCopy = lp.findCopyBySerialNumber(serialNumber);
             if(lpCopy != null){
                 found = true;
             }

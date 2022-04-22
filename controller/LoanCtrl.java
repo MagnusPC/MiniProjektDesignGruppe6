@@ -30,12 +30,12 @@ public class LoanCtrl {
     public Person findPersonByPhone(String phone){
         return personCtrl.findPersonByPhone(phone);
     }
-    //TODO f� den til at tilf�je til currentLoan
-    public Copy findCopyBySerialNo(int serialNumber){
+    
+    public Copy findCopyBySerialNumber(int serialNumber){
         return lpCtrl.findCopyBySerialNumber(serialNumber);
     }
 
-    public void createLoan(Person person){
+    public void createLoan(){
         //TODO få loanctrl til at adde copies (evt med kald til findBy...)
         Loan loan = new Loan();
         currentLoan = loan;
@@ -44,7 +44,7 @@ public class LoanCtrl {
      * Sets the person to the loan
      * @param phone finds the person with the phone connected with the person
      */
-    public void setPerson(String phone){
+    public void addPerson(String phone){
         currentLoan.setPerson(findPersonByPhone(phone));
     }
     
@@ -55,20 +55,6 @@ public class LoanCtrl {
         loanContainer.addLoan(currentLoan);
         System.out.println("Loan has been archived ");
         System.out.println("The renting period is 14 days from today: " + getDate());
-    }
-    
-   
-    
-    /**
-     * Returns the LP's title connected to the loan
-     */
-    public void getLPTitle(){
-        if(currentLoan == null){
-            System.out.println("There are no LP connected to the loan");
-        }
-        //TODO samme som ovenstående
-        //String lptitle = currentLoan.getLPTitle();
-        //System.out.println("You are trying to loan: " + lptitle);
     }
  
 }
