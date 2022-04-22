@@ -44,9 +44,9 @@ public class LPCtrl
     // }
     
     /**
-     * finds a LP from the barcode
+     * finds a LP from the serialnumber
      */
-    public Copy findCopyBySerialNo(int serialNumber){
-        return lpContainer.findCopyBySerialNo(serialNumber);
+    public Copy findLPBySerialNo(int serialNumber){
+        return lpContainer.findLPBySerialNo(serialNumber);
     }
 }

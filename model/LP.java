@@ -54,17 +54,17 @@ public class LP
     
     public Copy findCopyBySerialNo(int serialNumber){
         boolean found = false;
-        Copy copy = null;
+        Copy copyToGet = null;
         int index = 0;
         while(index < copies.size() && !found){
-            Copy element = copies.get(index);
-            if(serialNumber == element.getSerialNo()){
+            Copy copy = copies.get(index);
+            if(serialNumber == copy.getSerialNo()){
                 found = true;
-                copy = element;
+                copyToGet = copy;
             }
             index++;
         }
-        return copy; 
+        return copyToGet; 
     }
     
     public void printLPShort(){
