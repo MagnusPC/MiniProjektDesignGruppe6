@@ -22,6 +22,7 @@ public class Loan
         // initialise instance variables
         this.person = person;
         copies = new ArrayList<>();
+        copies.add(copy);
     }
 
     /*
