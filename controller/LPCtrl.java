@@ -46,7 +46,7 @@ public class LPCtrl
     /**
      * finds a LP from the serialnumber
      */
-    public Copy findLPBySerialNo(int serialNumber){
-        return lpContainer.findLPBySerialNo(serialNumber);
+    public Copy findLPBySerialNumber(int serialNumber){
+        return lpContainer.findCopyBySerialNo(serialNumber);
     }
 }

@@ -32,7 +32,7 @@ public class LoanCtrl {
     }
     //TODO f� den til at tilf�je til currentLoan
     public Copy findCopyBySerialNo(int serialNumber){
-        return lpCtrl.findCopyBySerialNo(serialNumber);
+        return lpCtrl.findCopyBySerialNumber(serialNumber);
     }
 
     public void createLoan(Person person){
