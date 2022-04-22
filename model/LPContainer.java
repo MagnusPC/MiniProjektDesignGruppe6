@@ -8,8 +8,7 @@ import java.util.ArrayList;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class LPContainer
-{
+public class LPContainer {
     // instance variables - replace the example below with your own
     private static LPContainer instance;
     private ArrayList<LP> lps;
@@ -18,25 +17,23 @@ public class LPContainer
     /**
      * Constructor for objects of class LpContainer
      */
-    private LPContainer()
-    {
+    private LPContainer() {
         // initialise instance variables
         lps = new ArrayList<>();
     }
+    
     /**
      * Static method because its a simpleton
      * So it doesn't make a new instance of LPContainer
      */
-    public static LPContainer getInstance(){
+    public static LPContainer getInstance() {
         if(instance == null){
             instance = new LPContainer();
         }
         return instance;
     }
     
-   
-    
-    public Copy findCopyBySerialNumber(int serialNumber){
+    public Copy findCopyBySerialNumber(int serialNumber) {
         boolean found = false;
         Copy lpCopy = null;
         int index = 0;

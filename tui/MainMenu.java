@@ -26,6 +26,7 @@ public class MainMenu {
     public void start() {
         mainMenu();
     }
+    
     /**
      * The first terminal at the moment can start the loaning process
      */
@@ -56,6 +57,7 @@ public class MainMenu {
             }
         }
     }
+    
     /**
      * Writes to the user the possibilities that he has and returns the choice
      * The written part of the mainMenu
@@ -78,7 +80,7 @@ public class MainMenu {
         return choice;
     }
     
-    private void runTest(){
+    private void runTest() {
         //crasher
         testCode.setUp();
         testCode.testLoan();

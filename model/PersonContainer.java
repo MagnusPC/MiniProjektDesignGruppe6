@@ -8,8 +8,7 @@ import java.util.ArrayList;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class PersonContainer
-{
+public class PersonContainer {
     // instance variables - replace the example below with your own
     private static PersonContainer instance;
     private ArrayList<Person> persons;
@@ -17,8 +16,7 @@ public class PersonContainer
     /**
      * Constructor for objects of class PersonContainer
      */
-    public PersonContainer()
-    {
+    public PersonContainer() {
         // initialise instance variables
         persons = new ArrayList<>();
     }
@@ -27,7 +25,7 @@ public class PersonContainer
      * Static method because its a simpleton
      * So it doesn't make a new instance of personContainer
      */
-    public static PersonContainer getInstance(){
+    public static PersonContainer getInstance() {
         if (instance == null){
             instance = new PersonContainer();
         }
@@ -37,7 +35,7 @@ public class PersonContainer
     /**
      * adds a person to the Personcontainer
      */
-    public void addPerson(Person person){
+    public void addPerson(Person person) {
         persons.add(person);
     }
     
@@ -45,7 +43,7 @@ public class PersonContainer
      * Finds a person from a phone
      * Returns person
      */
-    public Person findPersonByPhone(String phone){
+    public Person findPersonByPhone(String phone) {
         boolean found = false;
         Person person = null;
         int index = 0;

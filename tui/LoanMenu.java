@@ -110,7 +110,7 @@ public class LoanMenu {
      * Takes input from keyboard and returns a String
      * Input must be with ""
      */
-    private String inputPerson(){
+    private String inputPerson() {
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Indtast personens telefonnummer: ");
         String phone = keyboard.nextLine();
@@ -120,14 +120,14 @@ public class LoanMenu {
     /**
      * Takes input from keyboard and returns an int
      */
-    private int inputCopy(){
+    private int inputCopy() {
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Indtast pladens serienummer: ");
         int serialNumber = keyboard.nextInt();
         return serialNumber;
     }
     
-    private void createLoan(){
+    private void createLoan() {
         Person p = loanCtrl.findPersonByPhone(inputPerson());
         loanCtrl.createLoan(p);
     }

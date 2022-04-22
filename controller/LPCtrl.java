@@ -11,15 +11,14 @@ import java.util.Date;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class LPCtrl
-{
+public class LPCtrl {
     // instance variables - replace the example below with your own
     private LPContainer lpContainer;
 
     /**
      * Constructor for objects of class PersonCtrl
      */
-    public LPCtrl(){
+    public LPCtrl() {
         // initialise instance variables
         lpContainer = LPContainer.getInstance(); 
 
@@ -46,7 +45,7 @@ public class LPCtrl
     /**
      * finds a LP from the serialnumber
      */
-    public Copy findCopyBySerialNumber(int serialNumber){
+    public Copy findCopyBySerialNumber(int serialNumber) {
         return lpContainer.findCopyBySerialNumber(serialNumber);
     }
 }

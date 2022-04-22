@@ -8,8 +8,7 @@ import java.util.ArrayList;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Loan
-{
+public class Loan {
     // instance variables - replace the example below with your own
     private Person person;
     private ArrayList<Copy> copies;
@@ -17,8 +16,7 @@ public class Loan
     /**
      * Constructor for objects of class Loan
      */
-    public Loan()
-    {
+    public Loan() {
         // initialise instance variables
         person = null;
         copies = new ArrayList<>();
@@ -29,7 +27,7 @@ public class Loan
      */
     
     
-    public void addCopy(Copy copy){
+    public void addCopy(Copy copy) {
         copies.add(copy);
     }
     
@@ -40,21 +38,21 @@ public class Loan
     // public Copy getCopy(){
         // return copy;
     // }
-    public void setPerson(Person person){
+    public void setPerson(Person person) {
         this.person = person;
     }
     
     /**
      * gets the name of the person connected to the loan
      */
-    public String getPersonName(){
+    public String getPersonName() {
         return person.getName();
     }
     
     /**
      * gets the title of the LP connected to the loan
      */
-    public String getLPTitle(){
+    public String getLPTitle() {
         String title = "";
         //TODO foreach loop eller
         return title;

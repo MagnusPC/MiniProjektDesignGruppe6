@@ -23,8 +23,7 @@ public class TryMe
     /**
      * Default constructor for test class TryMe
      */
-    public TryMe()
-    {
+    public TryMe() {
        //TODO to af hvers
        loanCtrl1 = new controller.LoanCtrl();
        person1 = new model.Person("bob", "vej 3", 9000, "bykær", "1234");
@@ -39,8 +38,7 @@ public class TryMe
      * Called before every test case method.
      */
     @BeforeEach
-    public void setUp()
-    {
+    public void setUp() {
         // model.Person p = loanCtrl1.findPersonByPhone("1234");
         // model.Copy c = loanCtrl1.findCopyBySerialNo(001);
         lp1.addCopy(copy1);
@@ -54,12 +52,12 @@ public class TryMe
      * Called after every test case method.
      */
     @AfterEach
-    public void tearDown()
-    {
+    public void tearDown() {
+        
     }
     
     @Test
-    public void testLoan(){
+    public void testLoan() {
         
     }
 }

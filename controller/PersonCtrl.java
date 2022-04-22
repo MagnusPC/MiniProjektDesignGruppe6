@@ -9,8 +9,7 @@ import model.Person;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class PersonCtrl
-{
+public class PersonCtrl {
     // instance variables - replace the example below with your own
     
     private PersonContainer personContainer;
@@ -18,8 +17,7 @@ public class PersonCtrl
     /**
      * Constructor for objects of class PersonCtrl
      */
-    public PersonCtrl()
-    {
+    public PersonCtrl() {
         // initialise instance variables
         personContainer = new PersonContainer(); 
     }
@@ -35,14 +33,14 @@ public class PersonCtrl
     /**
      * add person to the personContainer
      */
-    public void addPerson(Person person){
+    public void addPerson(Person person) {
         personContainer.addPerson(person);
     }
     
     /**
      * Finds a person from a phone
      */
-    public Person findPersonByPhone(String phone){
+    public Person findPersonByPhone(String phone) {
         return personContainer.findPersonByPhone(phone);
     }
     }

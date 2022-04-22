@@ -7,8 +7,7 @@ package model;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Person
-{
+public class Person {
     // instance variables - replace the example below with your own
     private String name;
     private String address;
@@ -19,8 +18,7 @@ public class Person
     /**
      * Constructor for objects of class Person
      */
-    public Person(String name, String address, int zipCode, String city, String phone)
-    {
+    public Person(String name, String address, int zipCode, String city, String phone) {
         // initialise instance variables
         this.name = name;
         this.address = address;
@@ -29,32 +27,32 @@ public class Person
         this.phone = phone;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
     
-    public String getAddress(){
+    public String getAddress() {
         return address;
     }
     
-    public int getZipCode(){
+    public int getZipCode() {
         return zipCode;
     }
     
-    public String getCity(){
+    public String getCity() {
         return city;
     }
     
-    public String getPhone(){
+    public String getPhone() {
         return phone;
     }
     
-    public void printPersonShort(){
+    public void printPersonShort() {
         System.out.println("Personens navn: " + name);
         System.out.println(name + "s tlf nummer: " + phone);
     }
     
-    public void printPersonLong(){
+    public void printPersonLong() {
         printPersonShort();
         System.out.println(name + "s addresse: " + address + ", " + zipCode + " " + city);
     }

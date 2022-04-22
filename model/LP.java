@@ -8,8 +8,7 @@ import java.util.ArrayList;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class LP
-{
+public class LP {
     // instance variables - replace the example below with your own
     private int barcode;
     private String title;
@@ -22,8 +21,7 @@ public class LP
     /**
      * Constructor for objects of class Lp
      */
-    public LP(int barcode, String title, String artist, int publicationYear)
-    {
+    public LP(int barcode, String title, String artist, int publicationYear) {
         // initialise instance variables
         this.barcode = barcode;
         this.title = title;
@@ -32,8 +30,7 @@ public class LP
         copies = new ArrayList<>();
     }
 
-  
-    public Copy findCopyBySerialNumber(int serialNumber){
+    public Copy findCopyBySerialNumber(int serialNumber) {
         boolean found = false;
         Copy copyToGet = null;
         int index = 0;
