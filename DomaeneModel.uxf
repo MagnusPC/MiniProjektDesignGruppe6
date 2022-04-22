@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>253</x>
-      <y>264</y>
+      <x>473</x>
+      <y>330</y>
       <w>121</w>
       <h>143</h>
     </coordinates>
@@ -21,13 +21,14 @@ state
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>803</x>
-      <y>264</y>
+      <x>1023</x>
+      <y>330</y>
       <w>121</w>
       <h>143</h>
     </coordinates>
     <panel_attributes>LP
 --
+barcode
 title
 artist
 publicationDate
@@ -37,22 +38,22 @@ publicationDate
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>363</x>
-      <y>275</y>
+      <x>583</x>
+      <y>341</y>
       <w>176</w>
       <h>66</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..*
-m2=1..*
+m2=1
 contains &gt;</panel_attributes>
     <additional_attributes>10.0;30.0;140.0;30.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>132</x>
-      <y>275</y>
+      <x>352</x>
+      <y>341</y>
       <w>143</w>
       <h>66</h>
     </coordinates>
@@ -65,14 +66,14 @@ places &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>517</x>
-      <y>264</y>
+      <x>737</x>
+      <y>330</y>
       <w>121</w>
       <h>132</h>
     </coordinates>
     <panel_attributes>Copy
 --
-barcode
+serialNumber
 purchasePrice
 condition</panel_attributes>
     <additional_attributes/>
@@ -80,8 +81,8 @@ condition</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>22</x>
-      <y>264</y>
+      <x>242</x>
+      <y>330</y>
       <w>121</w>
       <h>176</h>
     </coordinates>
@@ -98,8 +99,8 @@ phone
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>627</x>
-      <y>275</y>
+      <x>847</x>
+      <y>341</y>
       <w>198</w>
       <h>66</h>
     </coordinates>
