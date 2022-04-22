@@ -1,6 +1,5 @@
 package tui;
-
- 
+import controller.TryMe;
 import java.util.Scanner;
 
 /**
@@ -12,6 +11,7 @@ import java.util.Scanner;
 public class MainMenu {
     // instance variables 
     private LoanMenu loanMenu;
+    private TryMe testClass;
     
 
     /**
@@ -20,6 +20,7 @@ public class MainMenu {
     public MainMenu() {
         // initialise instance variables
         loanMenu = new LoanMenu();
+        testClass = new TryMe();
        
     }
     
@@ -44,8 +45,7 @@ public class MainMenu {
                   loanMenu.start();
                   break;
                 case 9:
-                  System.out.println("Denne er ikke implementeret endnu");
-                  break;
+                  runTest();
                 case 0:
                   System.out.println("Tak for denne gang.");
                   running = false;
@@ -56,6 +56,12 @@ public class MainMenu {
             }
         }
     }
+    
+    private void runTest(){
+        testClass.setUp();
+        testClass.testLoan();
+    }
+    
     /**
      * Writes to the user the possibilities that he has and returns the choice
      * The written part of the mainMenu

@@ -64,7 +64,7 @@ public class TryMe
     }
     
     @Test
-    public void loan(){
+    public void testLoan(){
         
     }
 }
