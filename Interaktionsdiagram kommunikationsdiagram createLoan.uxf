@@ -4,7 +4,7 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>594</x>
+      <x>585</x>
       <y>306</y>
       <w>90</w>
       <h>27</h>
@@ -15,7 +15,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
+      <x>621</x>
       <y>324</y>
       <w>306</w>
       <h>126</h>
@@ -30,7 +30,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>585</x>
+      <x>576</x>
       <y>189</y>
       <w>297</w>
       <h>144</h>
@@ -45,7 +45,7 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>594</x>
+      <x>585</x>
       <y>432</y>
       <w>90</w>
       <h>27</h>
@@ -56,7 +56,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>441</x>
+      <x>432</x>
       <y>450</y>
       <w>297</w>
       <h>243</h>
@@ -70,7 +70,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
+      <x>621</x>
       <y>450</y>
       <w>252</w>
       <h>333</h>
@@ -83,7 +83,7 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>405</x>
+      <x>396</x>
       <y>675</y>
       <w>90</w>
       <h>27</h>
@@ -94,7 +94,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>675</x>
+      <x>666</x>
       <y>432</y>
       <w>342</w>
       <h>36</h>
@@ -106,7 +106,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>180</x>
+      <x>171</x>
       <y>432</y>
       <w>432</w>
       <h>36</h>
@@ -118,7 +118,7 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>72</x>
+      <x>63</x>
       <y>432</y>
       <w>117</w>
       <h>27</h>
@@ -129,7 +129,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>90</x>
+      <x>81</x>
       <y>450</y>
       <w>315</w>
       <h>108</h>
@@ -141,7 +141,7 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>72</x>
+      <x>63</x>
       <y>540</y>
       <w>144</w>
       <h>36</h>
@@ -153,7 +153,7 @@ _:PersonContainer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>90</x>
+      <x>81</x>
       <y>567</y>
       <w>189</w>
       <h>99</h>
@@ -165,7 +165,7 @@ _:PersonContainer_</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>72</x>
+      <x>63</x>
       <y>648</y>
       <w>117</w>
       <h>27</h>
@@ -176,7 +176,7 @@ _:PersonContainer_</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>999</x>
+      <x>990</x>
       <y>432</y>
       <w>90</w>
       <h>27</h>
@@ -187,7 +187,7 @@ _:PersonContainer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1035</x>
+      <x>1026</x>
       <y>450</y>
       <w>342</w>
       <h>72</h>
@@ -199,7 +199,7 @@ _:PersonContainer_</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>999</x>
+      <x>990</x>
       <y>504</y>
       <w>126</w>
       <h>36</h>
@@ -211,7 +211,7 @@ _:LPContainer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1035</x>
+      <x>1026</x>
       <y>531</y>
       <w>171</w>
       <h>72</h>
@@ -224,7 +224,7 @@ getCopyBySerialNumber()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>999</x>
+      <x>990</x>
       <y>648</y>
       <w>90</w>
       <h>27</h>
@@ -235,7 +235,7 @@ getCopyBySerialNumber()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>621</x>
+      <x>612</x>
       <y>765</y>
       <w>135</w>
       <h>36</h>
@@ -247,7 +247,7 @@ _:LoanContainer_</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>999</x>
+      <x>990</x>
       <y>585</y>
       <w>90</w>
       <h>27</h>
@@ -258,7 +258,7 @@ _:LoanContainer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1035</x>
+      <x>1026</x>
       <y>603</y>
       <w>234</w>
       <h>63</h>
