@@ -1,6 +1,6 @@
 package tui;
 
- 
+import controller.TryMe;
 import java.util.Scanner;
 
 /**
@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class MainMenu {
     // instance variables 
     private LoanMenu loanMenu;
-    
+    private TryMe testCode;
 
     /**
      * Constructor for objects of class MainMenu
@@ -44,7 +44,7 @@ public class MainMenu {
                   loanMenu.start();
                   break;
                 case 9:
-                  System.out.println("Denne er ikke implementeret endnu");
+                  runTest();
                   break;
                 case 0:
                   System.out.println("Tak for denne gang.");
@@ -77,5 +77,9 @@ public class MainMenu {
         int choice = keyboard.nextInt();
         return choice;
     }
-   
+    
+    private void runTest(){
+        testCode.setUp();
+        testCode.testLoan();
+    }
 }
