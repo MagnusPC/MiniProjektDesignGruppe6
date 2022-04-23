@@ -23,14 +23,6 @@ public class PersonCtrl {
     }
     
     /**
-     * Creates a person with input form user
-     */
-    /*public void createPerson(String name, String address, int zipCode, String city, String phone){
-        Person person = new Person(name, address, zipCode, city, phone);
-        addPerson(person);
-    }*/
-    
-    /**
      * add person to the personContainer
      */
     public void addPerson(Person person) {

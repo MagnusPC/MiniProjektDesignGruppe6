@@ -41,7 +41,7 @@ public class TryMe
     public void setUp() {
         // model.Person p = loanCtrl1.findPersonByPhone("1234");
         // model.Copy c = loanCtrl1.findCopyBySerialNo(001);
-        lp1.addCopy(copy1);
+        //lp1.addCopy(copy1);
         // loanCtrl1.createLoan();
         //TODO set person and copies/Arraylist of LP's Then it should work
     }

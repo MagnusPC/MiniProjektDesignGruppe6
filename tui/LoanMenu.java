@@ -41,6 +41,8 @@ public class LoanMenu {
             switch (choice) {
                 case 1:
                   createLoan();
+                  findPersonByPhone();
+                  
                   break;
                 case 0:
                   running = false;
@@ -51,26 +53,7 @@ public class LoanMenu {
             }
         }
     }
-    // /**
-     // * The functionality of our verifier just before a loan is finished
-     // * Takes input from keyboard
-     // */
-    // public void verifyLoan(){
-        // boolean running = true;
-        // while (running) {
-            // int choice = writeVerifyMenu();
-            // switch(choice){
-                // case 1:
-                // loanCtrl.finishLoan();
-                // break;
-                // case 0:
-                // System.out.println("Ikke implementeret");    
-                
-                // break;
-            // }
-        // }
-        
-    // }
+    
     /**
      * the visual from the loan menu
      * Takes input form keyboard
@@ -84,19 +67,6 @@ public class LoanMenu {
         int choice = getIntegerFromUser(keyboard);
         return choice;
     }
-    // /**
-     // * the visual from the verifyLoan menu
-     // * takes input from keyboard
-     // */
-    // private int writeVerifyMenu() {
-        // Scanner keyboard = new Scanner(System.in);
-        // loanCtrl.getLPTitle();
-        // loanCtrl.getPersonName();
-        // System.out.println(" (1) Faerdigoer");
-        // System.out.println(" (0) annuller");
-        // int choice = keyboard.nextInt();
-        // return choice;
-    // }
     
     private int getIntegerFromUser(Scanner keyboard) {
         while (!keyboard.hasNextInt()) {
@@ -106,30 +76,44 @@ public class LoanMenu {
         return keyboard.nextInt();
     }
     
+    private String getStringFromUser(Scanner keyboard) {
+        while (!keyboard.hasNext()) {
+            System.out.println("Input skal vaere en String - proev igen");
+            keyboard.nextLine();
+        }
+        return keyboard.next();
+    }
+    
     /**
      * Takes input from keyboard and returns a String
      * Input must be with ""
      */
     private String inputPerson() {
+    private void findPersonByPhone(){
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Indtast personens telefonnummer: ");
-        String phone = keyboard.nextLine();
-        return phone;
+        loanCtrl.findPersonByPhone(getStringFromUser(keyboard));
+        
     }
     
     /**
      * Takes input from keyboard and returns an int
      */
+<<<<<<< Updated upstream
     private int inputCopy() {
+    private void inputCopy(){
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Indtast pladens serienummer: ");
-        int serialNumber = keyboard.nextInt();
-        return serialNumber;
+        loanCtrl.findCopyBySerialNumber(getIntegerFromUser(keyboard));
+        
     }
     
     private void createLoan() {
         Person p = loanCtrl.findPersonByPhone(inputPerson());
         loanCtrl.createLoan(p);
+    private void createLoan(){
+        loanCtrl.createLoan();
+        
     }
     
     // private void createLoan(){
@@ -138,6 +122,7 @@ public class LoanMenu {
         // loanCtrl.createLoan(person, copy);
         // verifyLoan();
     // }
+    
     
 }
 

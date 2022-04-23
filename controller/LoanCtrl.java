@@ -10,6 +10,7 @@ public class LoanCtrl {
     private Loan currentLoan;
     private Date date;
     
+    private Person person;
     /**
      * 
      */
@@ -23,6 +24,12 @@ public class LoanCtrl {
     
     public String getDate() {
         return date.toString();
+    }
+    
+    
+    
+    public void setPerson(Person person){
+        this.person = person;
     }
     
     /**
@@ -48,6 +55,19 @@ public class LoanCtrl {
      */
     public void addPerson(String phone) {
         currentLoan.setPerson(findPersonByPhone(phone));
+    public Person findPersonByPhone(String phone){
+        currentLoan.setPerson(personCtrl.findPersonByPhone(phone));
+        return personCtrl.findPersonByPhone(phone);
+    }
+    
+    public Copy findCopyBySerialNumber(int serialNumber){
+        currentLoan.addCopy(lpCtrl.findCopyBySerialNumber(serialNumber));
+        return lpCtrl.findCopyBySerialNumber(serialNumber);
+    }
+
+    public void createLoan(){
+        Loan loan = new Loan();
+        
     }
     
     /**

@@ -85,4 +85,5 @@ public class MainMenu {
         testCode.setUp();
         testCode.testLoan();
     }
+
 }
