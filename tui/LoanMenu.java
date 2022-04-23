@@ -42,7 +42,8 @@ public class LoanMenu {
                 case 1:
                   createLoan();
                   findPersonByPhone();
-                  
+                  findCopyBySerialNumber();
+                  finishLoan();
                   break;
                 case 0:
                   running = false;
@@ -84,11 +85,15 @@ public class LoanMenu {
         return keyboard.next();
     }
     
+    private void finishLoan(){
+        loanCtrl.finishLoan();
+    }
+    
     /**
      * Takes input from keyboard and returns a String
      * Input must be with ""
      */
-    private String inputPerson() {
+    
     private void findPersonByPhone(){
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Indtast personens telefonnummer: ");
@@ -96,21 +101,22 @@ public class LoanMenu {
         
     }
     
+    private void findCopyBySerialNumber(){
+        Scanner keyboard = new Scanner(System.in);
+        loanCtrl.findCopyBySerialNumber(getIntegerFromUser(keyboard));
+    }
+    
     /**
      * Takes input from keyboard and returns an int
      */
-<<<<<<< Updated upstream
-    private int inputCopy() {
+
     private void inputCopy(){
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Indtast pladens serienummer: ");
         loanCtrl.findCopyBySerialNumber(getIntegerFromUser(keyboard));
         
     }
-    
-    private void createLoan() {
-        Person p = loanCtrl.findPersonByPhone(inputPerson());
-        loanCtrl.createLoan(p);
+      
     private void createLoan(){
         loanCtrl.createLoan();
         

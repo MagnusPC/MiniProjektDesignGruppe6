@@ -26,23 +26,10 @@ public class LoanCtrl {
         return date.toString();
     }
     
-    
-    
     public void setPerson(Person person){
         this.person = person;
     }
     
-    /**
-     * Finds a person in our personContainer with the phone attribute
-     */
-    public Person findPersonByPhone(String phone) {
-        return personCtrl.findPersonByPhone(phone);
-    }
-    
-    public Copy findCopyBySerialNumber(int serialNumber) {
-        return lpCtrl.findCopyBySerialNumber(serialNumber);
-    }
-
     public void createLoan() {
         //TODO få loanctrl til at adde copies (evt med kald til findBy...)
         Loan loan = new Loan();
@@ -53,8 +40,7 @@ public class LoanCtrl {
      * Sets the person to the loan
      * @param phone finds the person with the phone connected with the person
      */
-    public void addPerson(String phone) {
-        currentLoan.setPerson(findPersonByPhone(phone));
+   
     public Person findPersonByPhone(String phone){
         currentLoan.setPerson(personCtrl.findPersonByPhone(phone));
         return personCtrl.findPersonByPhone(phone);
@@ -65,11 +51,6 @@ public class LoanCtrl {
         return lpCtrl.findCopyBySerialNumber(serialNumber);
     }
 
-    public void createLoan(){
-        Loan loan = new Loan();
-        
-    }
-    
     /**
      * Saves the loan in the loanContainer and gives feedback to user
      */
