@@ -14,9 +14,8 @@ public class LP {
     private String title;
     private String artist;
     private int publicationYear;
-    //TODO: Condition, check i loops.
-    private ArrayList<Copy> copies;
-    private Copy copy; //failsave til print commands, bør ændres
+    ArrayList<Copy> copies;
+    
 
     /**
      * Constructor for objects of class Lp
@@ -28,6 +27,10 @@ public class LP {
         this.artist = artist;
         this.publicationYear = publicationYear;
         copies = new ArrayList<>();
+    }
+    
+    public int getBarcode(){
+        return barcode;
     }
 
     public Copy findCopyBySerialNumber(int serialNumber) {

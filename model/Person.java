@@ -47,13 +47,4 @@ public class Person {
         return phone;
     }
     
-    public void printPersonShort() {
-        System.out.println("Personens navn: " + name);
-        System.out.println(name + "s tlf nummer: " + phone);
-    }
-    
-    public void printPersonLong() {
-        printPersonShort();
-        System.out.println(name + "s addresse: " + address + ", " + zipCode + " " + city);
-    }
 }

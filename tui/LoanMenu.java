@@ -28,6 +28,14 @@ public class LoanMenu {
     }
 
     public void start() {
+        loanCtrl.createPerson("Mads", "Aalborgvej", 9000,"Aalborg", "12345678");
+        loanCtrl.createPerson("Lasse", "Nibevej", 1234, "Nibe","87654321");
+        loanCtrl.createPerson("Magnus", "Horsensvej", 4321, "Horsens", "56784321");
+        loanCtrl.createLP(4321, "Dark Vibrations", "Saveus", 2022);
+        loanCtrl.createLP(1234,"Shotgun Blues","Volbeat", 2021);
+        
+        
+        
         loanMenu();
     }
     

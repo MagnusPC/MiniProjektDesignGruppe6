@@ -12,7 +12,7 @@ public class Copy {
     private int serialNumber;
     private String condition; //kan også vælges fra array
     private double purchasePrice;
-
+    private LP lp;
     /**
      * Constructor for objects of class Lp
      */
@@ -35,13 +35,7 @@ public class Copy {
         return purchasePrice;
     }
     
-    public void printCopyShort() {
-        System.out.println("Pladens serienummer: " + serialNumber);
-    }
-    
-    public void printCopyLong() {
-        printCopyShort();
-        System.out.println("Pladens stand: " + condition);
-        System.out.println("Pladens indkøbspris: " + purchasePrice);
+    public void setLP(LP lp){
+        this.lp = lp;
     }
 }

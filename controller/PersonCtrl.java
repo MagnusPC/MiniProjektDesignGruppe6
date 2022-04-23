@@ -35,5 +35,12 @@ public class PersonCtrl {
     public Person findPersonByPhone(String phone) {
         return personContainer.findPersonByPhone(phone);
     }
+    
+    public Person createPerson(String name, String address, int zipCode, String city, String phone){
+        Person person = new Person (name, address, zipCode, city, phone);
+        personContainer.addPerson(person);
+        return person;
+    }
+    
     }
     

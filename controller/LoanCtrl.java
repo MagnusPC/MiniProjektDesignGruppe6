@@ -59,5 +59,17 @@ public class LoanCtrl {
         System.out.println("Loan has been archived ");
         System.out.println("The renting period is 14 days from today: " + getDate());
     }
+    
+    public void createPerson(String name, String address, int zipCode, String city,String phone){
+        personCtrl.createPerson(name, address, zipCode, city, phone);
+    }
+    
+    public void createLP(int barcode, String title, String artist, int publicationYear){
+        lpCtrl.createLP(barcode, title, artist, publicationYear);
+    }
+    
+    public void addCopyToLPByTitle(int barcode, Copy copy){
+        lpCtrl.addCopyToLPByBarcode(barcode, copy);
+    }
  
 }

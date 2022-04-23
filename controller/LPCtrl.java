@@ -29,18 +29,17 @@ public class LPCtrl {
         // addCopy(copy);
     // }
     
-    // public void createLP(int barcode, String title, String artist, int publicationYear){
-        // LP lp = new LP(barcode, title, artist, publicationYear);
-        // addLP(lp);
-    // }
+     public void createLP(int barcode, String title, String artist, int publicationYear){
+        lpContainer.addLP(barcode, title, artist, publicationYear);
+     }
     
     // private void addCopy(Copy copy){
         // lpContainer.addCopy(copy);
     // }
     
-    // private void addLP(LP lp){
-        // lpContainer.addLP(lp);
-    // }
+    public void addCopyToLPByBarcode(int barcode, Copy c){
+        lpContainer.addCopyToLPByBarcode(barcode, c);
+    }
     
     /**
      * finds a LP from the serialnumber
