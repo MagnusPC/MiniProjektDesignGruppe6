@@ -24,12 +24,7 @@ public class TryMe
      * Default constructor for test class TryMe
      */
     public TryMe() {
-       //TODO to af hvers
-       loanCtrl1 = new controller.LoanCtrl();
-       person1 = new model.Person("bob", "vej 3", 9000, "bykær", "1234");
-       //person2 = new model.Person("bente", "gade 8", 8000, "metropolis", "9999");
-       lp1 = new model.LP(888, "artist1", "album1", 2010);
-       copy1 = new model.Copy(001, "fjong", 99.99);
+       
     }
 
     /**
@@ -39,11 +34,7 @@ public class TryMe
      */
     @BeforeEach
     public void setUp() {
-        // model.Person p = loanCtrl1.findPersonByPhone("1234");
-        // model.Copy c = loanCtrl1.findCopyBySerialNo(001);
-        //lp1.addCopy(copy1);
-        // loanCtrl1.createLoan();
-        //TODO set person and copies/Arraylist of LP's Then it should work
+        
     }
 
     /**

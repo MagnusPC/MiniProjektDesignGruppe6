@@ -56,19 +56,22 @@ public class LPContainer {
         }
         return returnLP;
     }
-    //TODO finder en lp, skal have lavet et loop som finder en LP, tjekker den og stopper når den finder den korrekte
-    public Copy findCopyBySerialNumber(int serialNumber) {
+    
+     public Copy findCopyBySerialNumber(int serialNumber) {
         boolean found = false;
-        Copy lpCopy = null;
-        int index = 0;
-        while(index < lps.size() && !found){
-            LP lp = lps.get(index);
-            lpCopy = lp.findCopyBySerialNumber(serialNumber);
-            if(lpCopy != null){
+        Copy copyToGet = null;
+        int i = 0;
+        ArrayList<Copy> copies = null;
+        LP getLP = null;
+        while(i < copies.size() && !found){
+            getLP = lps.get(i);
+            copies = getLP.getCopies();
+            if(copies.get(i).getSerialNo() == serialNumber){
+                copyToGet = copies.get(i);
                 found = true;
             }
-            index++;
+            i++;
         }
-        return lpCopy;
+        return copyToGet; 
     }
 }

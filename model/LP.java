@@ -33,18 +33,11 @@ public class LP {
         return barcode;
     }
 
-    public Copy findCopyBySerialNumber(int serialNumber) {
-        boolean found = false;
-        Copy copyToGet = null;
-        int index = 0;
-        while(index < copies.size() && !found){
-            Copy copy = copies.get(index);
-            if(serialNumber == copy.getSerialNo()){
-                found = true;
-                copyToGet = copy;
-            }
-            index++;
-        }
-        return copyToGet; 
+    public ArrayList getCopies (){
+        return new ArrayList<Copy>(copies);
+    }
+    
+    public void addCopy(Copy copy){
+        copies.add(copy);
     }
 }

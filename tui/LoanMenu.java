@@ -34,6 +34,12 @@ public class LoanMenu {
         loanCtrl.createLP(4321, "Dark Vibrations", "Saveus", 2022);
         loanCtrl.createLP(1234,"Shotgun Blues","Volbeat", 2021);
         
+        Copy copy1 = new Copy(12345678, "good", 3.99);
+        Copy copy2 = new Copy(87654321, "Bad", 4.99);
+        
+        loanCtrl.addCopyToLPByTitle(1234, copy1);
+        loanCtrl.addCopyToLPByTitle(4321, copy2);
+        
         
         
         loanMenu();
