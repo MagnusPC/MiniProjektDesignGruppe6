@@ -9,8 +9,8 @@ public class LoanCtrl {
     private LoanContainer loanContainer;
     private Loan currentLoan;
     private Date date;
-    
     private Person person;
+    
     /**
      * 
      */

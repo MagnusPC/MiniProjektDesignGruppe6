@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>8</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>544</x>
-      <y>160</y>
-      <w>296</w>
-      <h>216</h>
+      <x>648</x>
+      <y>180</y>
+      <w>333</w>
+      <h>234</h>
     </coordinates>
     <panel_attributes>LoanMenu
 --
@@ -18,22 +18,23 @@
 +&lt;&lt;create&gt;&gt;LoanMenu()
 +start()
 -loanMenu()
-+verifyLoan()
 -writeLoanMenu():int
--writeVerifyMenu()int
 -getIntegerFromUser(Scanner keyboard):int
--inputPerson():String
--inputLp():int
+-getStringFromUser(Scanner keyboard):String
+-finishLoan()
+-findPersonByPhone()
+-findCopyBySerialNumber()
+-inputCopy()
 -createLoan()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>552</x>
-      <y>440</y>
-      <w>280</w>
-      <h>200</h>
+      <x>657</x>
+      <y>495</y>
+      <w>531</w>
+      <h>261</h>
     </coordinates>
     <panel_attributes>LoanCtrl
 --
@@ -42,24 +43,27 @@
 -loanContainer:LoanContainer
 -currentLoan:Loan
 -date:Date
+-person:Person
 --
 +&lt;&lt;create&gt;&gt;LoanCtrl()
 +getDate():String
-+findPerson(phone:String):Person
-+findLp(barcode:int):LP
-+createLoan(person:Person, lp:LP)
+-setPerson(person:Person)
++createLoan()
++findPersonByPhone(phone:String) Person
++findCopyBySerialNumber(serialNumber: int) Copy
 +finishLoan()
-+getPersonName()
-+getLPTitle()</panel_attributes>
++createPerson(name:String, adress:String, artist:String, zipCode:int, city:String, phone:String)
++createLp(barcode:int, title:String, artist:String, publicationYear:int)
++addCopyToLPByTitle(barcode:int, copy:Copy)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>440</x>
-      <y>688</y>
-      <w>264</w>
-      <h>144</h>
+      <x>531</x>
+      <y>810</y>
+      <w>297</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>Loan
 --
@@ -67,21 +71,19 @@
 -copies:ArrayList&lt;Copy&gt;
 --
 +&lt;&lt;create&gt;&gt;Loan(person:Person, lp:LP)
-+setPerson(person:Person)
 +addCopy()
-+setLp(lp:LP)
++setPerson(person:Person)
 +getPerson()Person
-+getPersonName()String
 +getLPTitle()String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>632</x>
-      <y>888</y>
-      <w>208</w>
-      <h>136</h>
+      <x>747</x>
+      <y>999</y>
+      <w>234</w>
+      <h>153</h>
     </coordinates>
     <panel_attributes>                                             1
 _LoanContainer_
@@ -98,28 +100,28 @@ _+getInstance():LoanContainer_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>440</y>
-      <w>336</w>
-      <h>96</h>
+      <x>36</x>
+      <y>495</y>
+      <w>504</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>PersonCtrl
 --
 -personContainer:PersonContainer
 --
 +&lt;&lt;create&gt;&gt;PersonCtrl()
-+createPerson()
 -addPerson()
-+findPersonByPhone(phone:String):Person</panel_attributes>
++findPersonByPhone(phone:String):Person
++createPerson(name:String, adress:String, zipCode:int city:String, phone:String):Person</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>576</y>
-      <w>336</w>
-      <h>120</h>
+      <x>36</x>
+      <y>648</y>
+      <w>378</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>                                                                             1
 _PersonContainer_
@@ -137,10 +139,10 @@ _+getInstance:PersonContainer_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>40</x>
-      <y>776</y>
-      <w>368</w>
-      <h>232</h>
+      <x>81</x>
+      <y>873</y>
+      <w>414</w>
+      <h>207</h>
     </coordinates>
     <panel_attributes>Person
 --
@@ -156,79 +158,78 @@ _+getInstance:PersonContainer_
 +getAddress():String
 +getZipCode():int
 +getCity():String
-+getPhone():String
-+printPersonShort()
-+printPersonLong()</panel_attributes>
++getPhone():String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>984</x>
-      <y>440</y>
-      <w>336</w>
-      <h>88</h>
+      <x>1278</x>
+      <y>495</y>
+      <w>378</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>LPCtrl
 --
 -lpContainer:LPContainer
--date:Date
 --
 +&lt;&lt;create&gt;&gt;LPCtrl()
-+findLpByBarcode(barcode:int):LP</panel_attributes>
++crateLP(barcode:int, title:String, artidt:String, publicationYear:int)
++addCopyToLPByBarcode(barcode:int, c:Copy)
++findCopyBySerialNumber(serialNumber:int):Copy</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>688</x>
-      <y>368</y>
-      <w>24</w>
-      <h>88</h>
+      <x>810</x>
+      <y>405</y>
+      <w>27</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>576</x>
-      <y>632</y>
-      <w>96</w>
+      <x>684</x>
+      <y>747</y>
+      <w>117</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>531</x>
+      <y>513</y>
+      <w>144</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>675</x>
+      <y>936</y>
+      <w>90</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;80.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>594</y>
+      <w>27</w>
       <h>72</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;70.0;100.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>328</x>
-      <y>456</y>
-      <w>240</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;280.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>568</x>
-      <y>824</y>
-      <w>80</w>
-      <h>112</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;50.0;80.0;120.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>192</x>
-      <y>528</y>
-      <w>24</w>
-      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
@@ -236,10 +237,10 @@ _+getInstance:PersonContainer_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>192</x>
-      <y>688</y>
-      <w>80</w>
-      <h>104</h>
+      <x>252</x>
+      <y>774</y>
+      <w>90</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>80.0;110.0;10.0;10.0</additional_attributes>
@@ -247,32 +248,32 @@ _+getInstance:PersonContainer_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>824</x>
-      <y>456</y>
-      <w>176</w>
-      <h>24</h>
+      <x>1179</x>
+      <y>513</y>
+      <w>117</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>200.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>736</x>
-      <y>632</y>
-      <w>24</w>
-      <h>272</h>
+      <x>864</x>
+      <y>747</y>
+      <w>27</w>
+      <h>270</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;320.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;280.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>984</x>
-      <y>600</y>
-      <w>336</w>
-      <h>136</h>
+      <x>1278</x>
+      <y>684</y>
+      <w>378</w>
+      <h>171</h>
     </coordinates>
     <panel_attributes>                                                                            1
 _LPContainer_
@@ -282,17 +283,19 @@ _-instance:LPContainer_
 --
 -&lt;&lt;create&gt;&gt;LPContainer()
 _+getInstance():LPContainer_
-+addLp()
-+findLpByBarcode(barcode:int):LP</panel_attributes>
++addLp(barcode:int, title:String, artist:String, publicationYear:int))
++addCopyToLPByBarcode(barcode:int, copy:Copy)
++findLP(barcode:int):LP
++findCopyBySerialNumber(serialNumber:int):Copy</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1256</x>
-      <y>520</y>
-      <w>24</w>
-      <h>96</h>
+      <x>1584</x>
+      <y>594</y>
+      <w>27</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
@@ -300,10 +303,10 @@ _+getInstance():LPContainer_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1256</x>
-      <y>760</y>
-      <w>24</w>
-      <h>24</h>
+      <x>1584</x>
+      <y>864</y>
+      <w>27</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;10.0</additional_attributes>
@@ -311,10 +314,10 @@ _+getInstance():LPContainer_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>984</x>
-      <y>768</y>
-      <w>336</w>
-      <h>224</h>
+      <x>1278</x>
+      <y>873</y>
+      <w>378</w>
+      <h>171</h>
     </coordinates>
     <panel_attributes>LP
 --
@@ -322,54 +325,53 @@ _+getInstance():LPContainer_
 -title:String
 -artist:String
 -publicationYear:int
+-copies:ArrayList:&lt;Copy&gt;
 --
 +&lt;&lt;create&gt;&gt;LP(barcode:int, title:String, artist:String, 
                       publicationYear:int)
 +addCopy()
 +getBarcode():int
-+getTitle():String
-+getArtist():String
-+getPubYear():int
-+printLPShort()
-+printLPLong()</panel_attributes>
++findCopyBySerialNumber(serialNumber:int):Copy</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1256</x>
-      <y>728</y>
-      <w>24</w>
-      <h>56</h>
+      <x>1584</x>
+      <y>846</y>
+      <w>27</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>600</x>
+      <x>711</x>
       <y>0</y>
-      <w>192</w>
-      <h>120</h>
+      <w>216</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>MainMenu
 --
 -loanMenu:LoanMenu
+-testCode:TryMe
 --
 +&lt;&lt;create&gt;&gt;MainMenu()
 +start()
 -mainMenu()
--writeMainMenu():int</panel_attributes>
+-writeMainMenu():int
+-runTest()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>688</x>
-      <y>112</y>
-      <w>24</w>
-      <h>64</h>
+      <x>810</x>
+      <y>126</y>
+      <w>27</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
@@ -377,10 +379,10 @@ _+getInstance():LPContainer_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>984</x>
-      <y>1024</y>
-      <w>336</w>
-      <h>224</h>
+      <x>1143</x>
+      <y>1152</y>
+      <w>378</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>Copy
 --
@@ -390,22 +392,21 @@ _+getInstance():LPContainer_
 --
 +&lt;&lt;create&gt;&gt;Copy(serialNumber:int, condition:String,
                       purchasePrice:double)
-+getSerialNumber:int
++getSerialNo:int
 +getCondition:String
 +getPurchasePrice:double
-+printCopyShort()
-+printCopyLong()</panel_attributes>
++setLP(lp:LP)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1256</x>
-      <y>984</y>
-      <w>24</w>
-      <h>56</h>
+      <x>1449</x>
+      <y>1035</y>
+      <w>162</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;130.0;160.0;10.0</additional_attributes>
   </element>
 </diagram>
