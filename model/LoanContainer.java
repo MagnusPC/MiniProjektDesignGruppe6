@@ -29,6 +29,10 @@ public class LoanContainer{
         return loans.add(loan);
     }
     
+    public ArrayList getLoans(){
+        return loans;
+    }
+    
     /**
      * Static method because its a simpleton
      * So it doesn't make a new instance of LoanContainer

@@ -41,13 +41,13 @@ public class LPContainer
         lps.add(lp);
     }
     
-    public Copy findCopyBySerialNo(int serialNumber){
+    public Copy findCopyBySerialNumber(int serialNumber){
         boolean found = false;
         Copy lpCopy = null;
         int index = 0;
         while(index < lps.size() && !found){
             LP element = lps.get(index);
-            lpCopy = element.findCopyBySerialNo(serialNumber);
+            lpCopy = element.findCopyBySerialNumber(serialNumber);
             if(lpCopy != null){
                 found = true;
             }

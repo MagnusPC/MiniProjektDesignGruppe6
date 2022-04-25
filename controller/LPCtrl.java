@@ -25,28 +25,12 @@ public class LPCtrl
 
     }
 
-    // public void createCopy(int serialNumber, String condition, double purchasePrice){
-        // Copy copy = new Copy(serialNumber, condition, purchasePrice);
-        // addCopy(copy);
-    // }
     
-    // public void createLP(int barcode, String title, String artist, int publicationYear){
-        // LP lp = new LP(barcode, title, artist, publicationYear);
-        // addLP(lp);
-    // }
-    
-    // private void addCopy(Copy copy){
-        // lpContainer.addCopy(copy);
-    // }
-    
-    // private void addLP(LP lp){
-        // lpContainer.addLP(lp);
-    // }
     
     /**
      * finds a LP from the barcode
      */
-    public Copy findCopyBySerialNo(int serialNumber){
-        return lpContainer.findCopyBySerialNo(serialNumber);
+    public Copy findCopyBySerialNumber(int serialNumber){
+        return lpContainer.findCopyBySerialNumber(serialNumber);
     }
 }

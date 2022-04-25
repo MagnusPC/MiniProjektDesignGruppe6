@@ -51,26 +51,7 @@ public class LoanMenu {
             }
         }
     }
-    /**
-     * The functionality of our verifier just before a loan is finished
-     * Takes input from keyboard
-     */
-    public void verifyLoan(){
-        boolean running = true;
-        while (running) {
-            int choice = writeVerifyMenu();
-            switch(choice){
-                case 1:
-                loanCtrl.finishLoan();
-                break;
-                case 0:
-                System.out.println("Ikke implementeret");    
-                
-                break;
-            }
-        }
-        
-    }
+    
     /**
      * the visual from the loan menu
      * Takes input form keyboard
@@ -82,19 +63,6 @@ public class LoanMenu {
         System.out.println(" (0) Tilbage");
         System.out.print("\n Vælg:");
         int choice = getIntegerFromUser(keyboard);
-        return choice;
-    }
-    /**
-     * the visual from the verifyLoan menu
-     * takes input from keyboard
-     */
-    private int writeVerifyMenu() {
-        Scanner keyboard = new Scanner(System.in);
-        loanCtrl.getLPTitle();
-        loanCtrl.getPersonName();
-        System.out.println(" (1) Faerdigoer");
-        System.out.println(" (0) annuller");
-        int choice = keyboard.nextInt();
         return choice;
     }
     
@@ -127,18 +95,22 @@ public class LoanMenu {
         return serialNumber;
     }
     
-    private void createLoan(){
-        Person p = loanCtrl.findPersonByPhone(inputPerson());
-        Copy c = loanCtrl.findCopyBySerialNo(inputCopy());
-        loanCtrl.createLoan(p, c);
+    public void createLoan(){
+        loanCtrl.createLoan();
     }
     
-    // private void createLoan(){
-        // Person person = loanCtrl.findPersonByPhone(inputPerson());
-        // Copy copy = loanCtrl.findCopyBySerialNo(inputCopy());
-        // loanCtrl.createLoan(person, copy);
-        // verifyLoan();
-    // }
+    public void addCopyBySerialNumber(){
+        Copy copy = loanCtrl.findCopyBySerialNumber(inputCopy());
+        loanCtrl.setCopy(copy);
+    }
     
+    public void addPersonByPhone(){
+        Person person = loanCtrl.findPersonByPhone(inputPerson());
+        loanCtrl.setPerson(person);
+    }
+    
+    public LoanCtrl getLoanCtrl(){
+        return loanCtrl;
+    }
 }
 

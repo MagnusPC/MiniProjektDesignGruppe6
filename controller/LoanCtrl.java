@@ -28,16 +28,16 @@ public class LoanCtrl {
      * Finds a person in our personContainer with the phone attribute
      */
     public Person findPersonByPhone(String phone){
-        return personCtrl.findPersonByPhone(phone);
+        Person p = personCtrl.findPersonByPhone(phone);
+        return p;
     }
-    //TODO f� den til at tilf�je til currentLoan
-    public Copy findCopyBySerialNo(int serialNumber){
-        return lpCtrl.findCopyBySerialNo(serialNumber);
+    
+    public Copy findCopyBySerialNumber(int serialNumber){
+        return lpCtrl.findCopyBySerialNumber(serialNumber);
     }
-
-    public void createLoan(Person person, Copy copy){
-        //TODO få loanctrl til at adde copies (evt med kald til findBy...)
-        Loan loan = new Loan(person, copy);
+    
+    public void createLoan(){
+        Loan loan = new Loan();
         currentLoan = loan;
     }
     
@@ -50,28 +50,16 @@ public class LoanCtrl {
         System.out.println("The renting period is 14 days from today: " + getDate());
     }
     
-    /**
-     * Returns the name connected to the loan
-     */
-    public void getPersonName(){
-         if(currentLoan == null){
-            System.out.println("There are no person connected to the loan");
-        }
-        //TODO RET FEJLEN HER - metode kalder navnet på sig selv
-        //String personName = currentLoan.getPersonName();
-        //System.out.println("To: " + personName);
+    public void setPerson(Person person){
+        currentLoan.setPerson(person);
     }
     
-    /**
-     * Returns the LP's title connected to the loan
-     */
-    public void getLPTitle(){
-        if(currentLoan == null){
-            System.out.println("There are no LP connected to the loan");
-        }
-        //TODO samme som ovenstående
-        //String lptitle = currentLoan.getLPTitle();
-        //System.out.println("You are trying to loan: " + lptitle);
+    public void setCopy(Copy copy){
+        currentLoan.setCopy(copy);
     }
- 
+    
+    public Loan getLoan(){
+        return currentLoan;
+    }
+    
 }

@@ -12,18 +12,17 @@ public class Loan
 {
     // instance variables - replace the example below with your own
     private Person person;
-    private ArrayList<Copy> copies;
+    private Copy copy;
     
     /**
      * Constructor for objects of class Loan
      */
-    public Loan(Person person, Copy copy)
+    public Loan()
     {
         // initialise instance variables
-        this.person = person;
-        copies = new ArrayList<>();
-        copies.add(copy);
-    }
+        person = null;
+        copy = null;
+        }
 
     /*
      * sørg for der ikke kan overskrives og person ikke er null
@@ -32,31 +31,17 @@ public class Loan
         this.person = person;
     }
     
-    public void addCopy(Copy copy){
-        copies.add(copy);
+    public void setCopy(Copy copy){
+        this.copy = copy;
     }
     
-    // public Person getPerson(){
-        // return person;
-    // }
-    
-    // public Copy getCopy(){
-        // return copy;
-    // }
-    
-    /**
-     * gets the name of the person connected to the loan
-     */
-    public String getPersonName(){
-        return person.getName();
+    public Person getPerson(){
+        return person;
     }
     
-    /**
-     * gets the title of the LP connected to the loan
-     */
-    public String getLPTitle(){
-        String title = "";
-        //TODO foreach loop eller
-        return title;
+    public Copy getCopy(){
+        return copy;
     }
+    
+   
 }

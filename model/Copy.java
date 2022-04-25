@@ -25,25 +25,9 @@ public class Copy
         this.purchasePrice = purchasePrice;
     }
 
-    public int getSerialNo(){
+    public int getSerialNumber(){
         return serialNumber;
     }
     
-    public String getCondition(){
-        return condition;
-    }
     
-    public double getPurchasePrice(){
-        return purchasePrice;
-    }
-    
-    public void printCopyShort(){
-        System.out.println("Pladens serienummer: " + serialNumber);
-    }
-    
-    public void printCopyLong(){
-        printCopyShort();
-        System.out.println("Pladens stand: " + condition);
-        System.out.println("Pladens indkøbspris: " + purchasePrice);
-    }
 }

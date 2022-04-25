@@ -40,25 +40,13 @@ public class LP
         return barcode;
     }
     
-    public String getTitle(){
-        return title;
-    }
-    
-    public String getArtist(){
-        return artist;
-    }
-    
-    public int getPubYear(){
-        return publicationYear;
-    }
-    
-    public Copy findCopyBySerialNo(int serialNumber){
+    public Copy findCopyBySerialNumber(int serialNumber){
         boolean found = false;
         Copy copy = null;
         int index = 0;
         while(index < copies.size() && !found){
             Copy element = copies.get(index);
-            if(serialNumber == element.getSerialNo()){
+            if(serialNumber == element.getSerialNumber()){
                 found = true;
                 copy = element;
             }
@@ -67,15 +55,4 @@ public class LP
         return copy; 
     }
     
-    public void printLPShort(){
-        System.out.println("Pladens titel: " + title);
-        System.out.println("Kunstneren: " + artist);
-        copy.printCopyShort();
-    }
-    
-    public void printLPLong(){
-        copy.printCopyLong();
-        System.out.println("Pladens stregkode: " + barcode);
-        System.out.println("Pladens udgivelsesår: " + publicationYear);
-    }
 }
