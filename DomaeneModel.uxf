@@ -4,86 +4,85 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>253</x>
-      <y>264</y>
+      <x>418</x>
+      <y>209</y>
       <w>121</w>
-      <h>143</h>
+      <h>132</h>
     </coordinates>
     <panel_attributes>Loan
 --
-loanNumber
-borrowDate
-period
-state
+person
+copy
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>803</x>
-      <y>264</y>
+      <x>968</x>
+      <y>209</y>
       <w>121</w>
-      <h>143</h>
+      <h>132</h>
     </coordinates>
     <panel_attributes>LP
 --
+barcode
 title
 artist
-publicationDate
+publicationYear
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>363</x>
-      <y>275</y>
+      <x>528</x>
+      <y>231</y>
       <w>176</w>
-      <h>66</h>
+      <h>55</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..*
-m2=1..*
+m2=1
 contains &gt;</panel_attributes>
-    <additional_attributes>10.0;30.0;140.0;30.0</additional_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>132</x>
-      <y>275</y>
+      <x>297</x>
+      <y>231</y>
       <w>143</w>
-      <h>66</h>
+      <h>55</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=0..*
 places &gt;</panel_attributes>
-    <additional_attributes>10.0;30.0;110.0;30.0</additional_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>517</x>
-      <y>264</y>
+      <x>682</x>
+      <y>209</y>
       <w>121</w>
       <h>132</h>
     </coordinates>
     <panel_attributes>Copy
 --
-barcode
-purchasePrice
-condition</panel_attributes>
+serialNumber
+condition
+purchasePrice</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>22</x>
-      <y>264</y>
+      <x>187</x>
+      <y>209</y>
       <w>121</w>
-      <h>176</h>
+      <h>132</h>
     </coordinates>
     <panel_attributes>Person
 --
@@ -98,15 +97,14 @@ phone
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>627</x>
-      <y>275</y>
+      <x>792</x>
+      <y>242</y>
       <w>198</w>
-      <h>66</h>
+      <h>44</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-m1=1
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=0..*
-is a copy of &gt;</panel_attributes>
-    <additional_attributes>160.0;30.0;10.0;30.0</additional_attributes>
+m1=1</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
