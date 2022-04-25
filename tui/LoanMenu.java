@@ -4,13 +4,6 @@ import controller.*;
 import model.Person;
 import model.Copy;
 
-
-/**
- * Write a description of class LoanMenu here.
- *
- * @author Mogens Holm Iversen
- * @version 0.1.0 Initial draft version 
- */
 public class LoanMenu {
     // instance variables
     private LoanCtrl loanCtrl;
@@ -41,6 +34,9 @@ public class LoanMenu {
             switch (choice) {
                 case 1:
                   createLoan();
+                  addPersonByPhone();
+                  addCopyBySerialNumber();
+                  finishLoan();
                   break;
                 case 0:
                   running = false;
@@ -65,7 +61,9 @@ public class LoanMenu {
         int choice = getIntegerFromUser(keyboard);
         return choice;
     }
-    
+    /**
+     * Checks if input from keyboard is a int
+     */
     private int getIntegerFromUser(Scanner keyboard) {
         while (!keyboard.hasNextInt()) {
             System.out.println("Input skal være et tal - prøv igen");
@@ -95,20 +93,36 @@ public class LoanMenu {
         return serialNumber;
     }
     
+    /**
+     * Creates a loan
+     */    
     public void createLoan(){
         loanCtrl.createLoan();
     }
-    
+    /**
+     * Adds a copy by serialNumber given from User's input
+     */
     public void addCopyBySerialNumber(){
         Copy copy = loanCtrl.findCopyBySerialNumber(inputCopy());
         loanCtrl.setCopy(copy);
     }
-    
+    /**
+     * Adds a person by phone given from User's input
+     */
     public void addPersonByPhone(){
         Person person = loanCtrl.findPersonByPhone(inputPerson());
         loanCtrl.setPerson(person);
     }
-    
+    /**
+     * Finishes Loan
+     */
+    public void finishLoan(){
+        loanCtrl.finishLoan();
+    }
+    /**
+     * Test Method
+     * Returns LoanCtrl
+     */
     public LoanCtrl getLoanCtrl(){
         return loanCtrl;
     }

@@ -3,12 +3,7 @@ package tui;
  
 import java.util.Scanner;
 
-/**
- * Write a description of class MainMenu here.
- *
- * @author Mogens Holm Iversen
- * @version 0.1.0 Initial draft version 
- */
+
 public class MainMenu {
     // instance variables 
     private LoanMenu loanMenu;

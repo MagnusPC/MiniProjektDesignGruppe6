@@ -2,14 +2,8 @@ package model;
 import java.util.ArrayList;
 
 
-/**
- * Write a description of class Lp here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class LP
-{
+
+public class LP{
     // instance variables - replace the example below with your own
     private int barcode;
     private String title;
@@ -22,8 +16,7 @@ public class LP
     /**
      * Constructor for objects of class Lp
      */
-    public LP(int barcode, String title, String artist, int publicationYear)
-    {
+    public LP(int barcode, String title, String artist, int publicationYear){
         // initialise instance variables
         this.barcode = barcode;
         this.title = title;
@@ -31,7 +24,10 @@ public class LP
         this.publicationYear = publicationYear;
         copies = new ArrayList<>();
     }
-
+    /**
+     * Adds a copy to the copies arrayList
+     * @Param copy to be added
+     */
     public void addCopy(Copy copy){
         copies.add(copy);
     }
@@ -40,6 +36,10 @@ public class LP
         return barcode;
     }
     
+    /**
+     * Finds a Copy from a serialNumber
+     * @param serialNumber 
+     */
     public Copy findCopyBySerialNumber(int serialNumber){
         boolean found = false;
         Copy copy = null;

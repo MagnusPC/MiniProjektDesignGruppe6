@@ -3,14 +3,8 @@ import java.util.ArrayList;
 import model.PersonContainer;
 import model.Person;
 
-/**
- * Write a description of class PersonCtrl here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class PersonCtrl
-{
+
+public class PersonCtrl{
     // instance variables - replace the example below with your own
     
     private PersonContainer personContainer;
@@ -18,8 +12,7 @@ public class PersonCtrl
     /**
      * Constructor for objects of class PersonCtrl
      */
-    public PersonCtrl()
-    {
+    public PersonCtrl(){
         // initialise instance variables
         personContainer = new PersonContainer(); 
     }

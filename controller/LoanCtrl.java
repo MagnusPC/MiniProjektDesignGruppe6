@@ -28,14 +28,19 @@ public class LoanCtrl {
      * Finds a person in our personContainer with the phone attribute
      */
     public Person findPersonByPhone(String phone){
-        Person p = personCtrl.findPersonByPhone(phone);
-        return p;
+        return personCtrl.findPersonByPhone(phone);
     }
     
+    /**
+     * Finds a Copy by a serialNumber
+     * @param 
+     */
     public Copy findCopyBySerialNumber(int serialNumber){
         return lpCtrl.findCopyBySerialNumber(serialNumber);
     }
-    
+    /**
+     * Creates a new loan and adds it to the field CurrentLoan
+     */
     public void createLoan(){
         Loan loan = new Loan();
         currentLoan = loan;
@@ -58,6 +63,10 @@ public class LoanCtrl {
         currentLoan.setCopy(copy);
     }
     
+    /**
+     * Test Method, for testing
+     * @returns currentLoan
+     */
     public Loan getLoan(){
         return currentLoan;
     }

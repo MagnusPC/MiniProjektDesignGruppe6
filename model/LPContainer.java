@@ -2,14 +2,8 @@ package model;
 import java.util.ArrayList;
 
 
-/**
- * Write a description of class LpContainer here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class LPContainer
-{
+
+public class LPContainer{
     // instance variables - replace the example below with your own
     private static LPContainer instance;
     private ArrayList<LP> lps;
@@ -18,8 +12,7 @@ public class LPContainer
     /**
      * Constructor for objects of class LpContainer
      */
-    private LPContainer()
-    {
+    private LPContainer(){
         // initialise instance variables
         lps = new ArrayList<>();
     }
@@ -41,6 +34,10 @@ public class LPContainer
         lps.add(lp);
     }
     
+    /**
+     * Sweeps the LP's ArrayLists and finds a copy
+     * @param serialNumber the copy with the serialNumber is returned
+     */
     public Copy findCopyBySerialNumber(int serialNumber){
         boolean found = false;
         Copy lpCopy = null;

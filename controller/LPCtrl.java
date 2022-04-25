@@ -5,14 +5,8 @@ import model.Copy;
 import java.util.Date;
 
 
-/**
- * Write a description of class LpCtrl here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class LPCtrl
-{
+
+public class LPCtrl{
     // instance variables - replace the example below with your own
     private LPContainer lpContainer;
 
@@ -24,8 +18,6 @@ public class LPCtrl
         lpContainer = LPContainer.getInstance(); 
 
     }
-
-    
     
     /**
      * finds a LP from the barcode

@@ -2,14 +2,8 @@ package model;
 import java.util.ArrayList;
 
 
-/**
- * Write a description of class PersonContainer here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class PersonContainer
-{
+
+public class PersonContainer{
     // instance variables - replace the example below with your own
     private static PersonContainer instance;
     private ArrayList<Person> persons;
@@ -17,8 +11,7 @@ public class PersonContainer
     /**
      * Constructor for objects of class PersonContainer
      */
-    public PersonContainer()
-    {
+    public PersonContainer(){
         // initialise instance variables
         persons = new ArrayList<>();
     }
@@ -62,7 +55,5 @@ public class PersonContainer
         return person;
     }
     
-    // public ArrayList getPersons(){
-        // return persons;
-    // }
+    
 }

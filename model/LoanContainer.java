@@ -2,12 +2,7 @@ package model;
 import java.util.ArrayList;
 
 
-/**
- * Write a description of class LoanContainer here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
+
 public class LoanContainer{
     // instance variables - replace the example below with your own
     private static LoanContainer instance;
@@ -16,8 +11,7 @@ public class LoanContainer{
     /**
      * Constructor for objects of class LoanContainer
      */
-    private LoanContainer()
-    {
+    private LoanContainer(){
         // initialise instance variables
         loans = new ArrayList<>();
     }
@@ -29,6 +23,9 @@ public class LoanContainer{
         return loans.add(loan);
     }
     
+    /**
+     * Test Method for testing
+     */
     public ArrayList getLoans(){
         return loans;
     }
